@@ -1,6 +1,5 @@
 package com.example.cmsc355_project;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
