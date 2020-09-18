@@ -1,6 +1,4 @@
-# Dylan-Kirkland
-work out goal app
-
+# Work Out Goal App
 Phillip Palanca's intial commit 
 
 Victoria Lopez Del Pino's initial commit
