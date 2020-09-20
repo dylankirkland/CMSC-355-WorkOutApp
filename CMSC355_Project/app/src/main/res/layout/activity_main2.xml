@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="#91F3DB"
         android:fontFamily="@font/sirin_stencil"
-        android:text="second activity page"
+        android:text="@string/second_activity_page"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
