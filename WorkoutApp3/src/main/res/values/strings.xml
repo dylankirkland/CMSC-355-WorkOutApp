@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Work out App 3</string>
+    <string name="type_your_age">type your age</string>
+    <string name="confirm">confirm</string>
+    <string name="type_your_weight">Type your weight</string>
+    <string name="enter_target_weight">Enter Target Weight</string>
+</resources>
