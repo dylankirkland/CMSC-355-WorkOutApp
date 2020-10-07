@@ -8,6 +8,16 @@ import android.view.View;
 import android.widget.Button;
 
 //ausawin was here, inclass commit
+
+/**
+ * App's Main Welcome Screen
+ * -------------------------
+ * Use of Button to bring you to Main Workout Screen
+ *
+ * Possible Picture of Logo Implemented? - Palancapg
+ *
+ */
+
 public class MainActivity extends AppCompatActivity {
     private Button buttonNext; //variable for button
     @Override
