@@ -15,4 +15,4 @@ Victoria branch committing something
 Phillip Palanca branch commit
 
 
-Midterm 1 
+Midterm 1 2
