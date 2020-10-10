@@ -14,4 +14,10 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+    
+//another test example to try
+    @Test
+    public void are_theseEqual() {
+        assertEquals(4, 4);
+    }
 }
