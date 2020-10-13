@@ -1,64 +1,36 @@
 package com.example.cmsc355_project;
 
+import java.util.List;
+
 /**
  *
- * The Workout class represents a workout it will contain the information of the workout's name,
- * how many sets the user wants to do, and how many reps of the certain workout. It will also implement
- * methods to set these variables. -Palancapg
+ * The Workout object represents a list of exercises
  *
  * This is a class so that it's function are not on the main activity.  - Palancapg
  *
  */
 
 public class Workout{
-    String name;
-    int reps;
-    int sets;
+    List<Exercise> exercises;
 
-    /**
-     *    Default Constructor -Palancapg
-     */
+
+    //Default Constructor
     public Workout(){
-        name = "N/A";
-        reps = 0;
-        sets = 0;
     }
 
-    /**
-     *    Parametrized Constructor -Palancapg
-     */
-    public Workout(String name,int reps,int sets){
+    //Parameterized Constructor
+    public Workout(List<Exercise> exercises){
+        this.exercises = exercises;
     }
 
-    /**
-     * Setter Methods -Palancapg
-     */
-    public void setName(String name){
-    }
+    //Method on Adding exercises to Workout and should update list and reprint the list
 
-    public void setReps(int reps) {
-    }
+    //Method on Removing specific from list and should update list and reprint the list
 
-    public void setSets(int sets) {
-    }
-    /**
-     * Getter Methods -Palancapg
-     */
-    public String getName() {
-        return name;
-    }
+    //Printing the list out in a specific format
 
-    public int getReps() {
-        return reps;
-    }
 
-    public int getSets() {
-        return sets;
-    }
 
-    /**
-     *  Print Format Method - Palancapg
-     */
 
 
 }
