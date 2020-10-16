@@ -12,46 +12,56 @@ import java.util.ArrayList;
  */
 
 public class Workout{
-    ArrayList<Exercise> exercises;
+    ArrayList<Exercise> workoutList;
 
     //Default Constructor
     public Workout(){
     }
 
     //Parameterized Constructor
-    public Workout(ArrayList<Exercise> exercises){
-        this.exercises = exercises;
+    public Workout(ArrayList<Exercise> workoutList){
+       this.workoutList = workoutList;
     }
 
     //Method on Adding exercises to Workout and should update list and reprint the list
     public void addExercise(Exercise newExercise){
-        this.exercises.add(newExercise);
+        this.workoutList.add(newExercise);
 
-        //reprint
+        //Reprint updated workout list
+        printWorkout();
     }
 
     //Method on Removing specific from list and should update list and reprint the list
     public void removeExercise(Exercise unwantedExercise, Boolean confirmation){
 
-        if(exercises.contains(unwantedExercise) && confirmation){ //Checks to see if the exercise is in the workout and the user actually wants to remove it -Palancapg
-            this.exercises.remove(unwantedExercise);
+        if(workoutList.contains(unwantedExercise) && confirmation){ //Checks to see if the exercise is in the workout and the user actually wants to remove it -Palancapg
+            this.workoutList.remove(unwantedExercise);
+        }
+        else if(!workoutList.contains(unwantedExercise) && confirmation){
+           System.out.println("Exercise: " + unwantedExercise.name + " looking to be removed is not found");
+        }
+        else if(workoutList.contains(unwantedExercise) && !confirmation){
+           System.out.println("Removal Process Stopped");
         }
         else{
-            System.out.println("Exercise can not be removed at this time");
+            System.out.println("Exercise and Confirmation can not be found :(");
         }
 
-        //reprint with print format
+        //Reprint updated workout list
+        printWorkout();
 
     }
 
-    //Method will rearrange list
+    //Method will rearrange list if a user wants to
     public void rearrange(Exercise movingExercise){
 
     }
 
     //Printing the list out in a specific format
-    public String print(){
-        return null;
+    public void printWorkout(){
+        for(Exercise exercise:workoutList) {
+            System.out.println(exercise.name + "   " + String.valueOf(exercise.sets) + " x " + String.valueOf(exercise.reps));
+        }
     }
 
 
