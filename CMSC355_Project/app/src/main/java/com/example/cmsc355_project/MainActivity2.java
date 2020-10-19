@@ -28,6 +28,8 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         Button addWorkoutBttn = (Button) findViewById(R.id.addWorkoutBttn);
+        Button settingsBttn = (Button) findViewById(R.id.settingsBttn);
+
 
 
 
