@@ -2,7 +2,7 @@
     <string name="app_name">CMSC355_Project</string>
     <string name="next">next</string>
     <string name="welcome_to_n_SimplyLift">Welcome to \n SimplyLift</string>
-    <string name="second_activity_page">app title</string>
+    <string name="second_activity_page">SimplyLift</string>
     <string name="add_workout">add workout</string>
     <string name="settings">settings</string>
     <string name="home">home</string>

@@ -51,6 +51,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/homescreen" />
 
+
+    //We should change this button to a regular button because it honestly doesn't show on my run of the app -Palancapg
     <Button
         android:id="@+id/addWorkoutBttn"
         android:layout_width="77dp"
