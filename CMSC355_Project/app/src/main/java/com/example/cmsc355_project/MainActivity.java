@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-//ausawin was here, inclass commit
-
 /**
  * App's Main Welcome Screen
  * -------------------------
@@ -40,4 +38,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent); //pass intent created in line above
     }
 }
-//pranaav comment 9/21 in class activity
+
