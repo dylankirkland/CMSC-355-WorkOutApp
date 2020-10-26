@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); //set current screen to layout of activity_main2.xml
 
         buttonNext = findViewById(R.id.buttonNext); //xml id for this button
         buttonNext.setOnClickListener(new View.OnClickListener() {
