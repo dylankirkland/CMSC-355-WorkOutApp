@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 /**
  * App's Main Welcome Screen
  * -------------------------
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); //current screen will display layout of activity_main.xml
+        setContentView(R.layout.activity_main);
 
         buttonNext = findViewById(R.id.buttonNext); //xml id for this button
         buttonNext.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +37,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent); //pass intent created in line above
     }
-
 }
-//pranaav comment 9/21 in class activity
+

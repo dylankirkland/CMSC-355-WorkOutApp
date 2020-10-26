@@ -23,39 +23,28 @@ import android.widget.Button;
  */
 
 public class MainActivity2 extends AppCompatActivity {
-    private Button buttonHome;
-    private Button buttonCreateWorkout;
+    private Button addWorkoutBttn;
+    private Button settingsBttn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        buttonHome = findViewById(R.id.buttonHome); //xml id for this button
-        buttonHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            //when button is clicked, opens activity 2 using openMainActivity2() method
-            public void onClick(View view) {
-                openMainActivity2();
-            }
-        });
+        addWorkoutBttn = findViewById(R.id.addWorkoutBttn);
+        settingsBttn = findViewById(R.id.settingsBttn);
 
-        buttonCreateWorkout = findViewById(R.id.buttonCreateWorkout); //xml id for this button
-        buttonCreateWorkout.setOnClickListener(new View.OnClickListener() {
+        addWorkoutBttn.setOnClickListener(new View.OnClickListener() {
             @Override
-            //when button is clicked, opens activity 3 using openMainActivity3() method
+            //when button is clicked, opens Create Workout using openCreateWorkoutActivity() method
             public void onClick(View view) {
-                openMainActivity3();
+                openCreateWorkoutActivity();
             }
         });
     }
-    public void openMainActivity2() {
+
+    public void openCreateWorkoutActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
-        Intent intent = new Intent(this, MainActivity2.class);
-        startActivity(intent); //pass intent created in line above
-    }
-    public void openMainActivity3() {
-        //intent object, parameters passed are context and class we want to open (context,class)
-        Intent intent = new Intent(this, MainActivity3.class);
+        Intent intent = new Intent(this, CreateWorkoutActivity.class);
         startActivity(intent); //pass intent created in line above
     }
 }

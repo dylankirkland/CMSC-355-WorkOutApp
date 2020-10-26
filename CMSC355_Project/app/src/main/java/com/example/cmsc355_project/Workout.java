@@ -1,64 +1,91 @@
 package com.example.cmsc355_project;
 
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+
 /**
  *
- * The Workout class represents a workout it will contain the information of the workout's name,
- * how many sets the user wants to do, and how many reps of the certain workout. It will also implement
- * methods to set these variables. -Palancapg
+ * The Workout object represents a list of exercises
  *
  * This is a class so that it's function are not on the main activity.  - Palancapg
  *
  */
 
 public class Workout{
-    String name;
-    int reps;
-    int sets;
+    ArrayList<Exercise> workoutList;
 
-    /**
-     *    Default Constructor -Palancapg
-     */
+    //Default Constructor
     public Workout(){
-        name = "N/A";
-        reps = 0;
-        sets = 0;
     }
 
-    /**
-     *    Parametrized Constructor -Palancapg
-     */
-    public Workout(String name,int reps,int sets){
+    //Parameterized Constructor
+    public Workout(ArrayList<Exercise> workoutList){
+       this.workoutList = workoutList;
     }
 
-    /**
-     * Setter Methods -Palancapg
-     */
-    public void setName(String name){
+    public void setWorkoutList(ArrayList<Exercise> workoutList) {
+        this.workoutList = workoutList;
     }
 
-    public void setReps(int reps) {
+    public ArrayList<Exercise> getWorkoutList() {
+        return workoutList;
     }
 
-    public void setSets(int sets) {
-    }
-    /**
-     * Getter Methods -Palancapg
-     */
-    public String getName() {
-        return name;
+    //Method on Adding exercises to Workout and should update list and reprint the list
+    public void addExercise(Exercise newExercise){
+        this.workoutList.add(newExercise);
+
+        //Reprint updated workout list
+        printWorkout();
     }
 
-    public int getReps() {
-        return reps;
+    //Method on Removing specific from list and should update list and reprint the list
+    public void removeExercise(Exercise unwantedExercise, Boolean confirmation){
+
+        if(workoutList.contains(unwantedExercise) && confirmation){ //Checks to see if the exercise is in the workout and the user actually wants to remove it -Palancapg
+            this.workoutList.remove(unwantedExercise);
+        }
+        else if(!workoutList.contains(unwantedExercise) && confirmation){
+           System.out.println("Exercise: " + unwantedExercise.name + " looking to be removed is not found");
+        }
+        else if(workoutList.contains(unwantedExercise) && !confirmation){
+           System.out.println("Removal Process Halted");
+        }
+        else{
+            System.out.println("Exercise and Confirmation can not be found :(");
+        }
+
+        //Reprint updated workout list
+        printWorkout();
+
     }
 
-    public int getSets() {
-        return sets;
+    //Method will rearrange list if a user wants to
+    public void rearrange(Exercise movingExercise, int index){
+        if(workoutList.get(index) == null) { //see if the index is filled with another exercise
+            this.workoutList.add(index, movingExercise); // if so place it in the index and the arrayList will shift to the right
+        }
+        else{
+            addExercise(movingExercise); // if not then it will add the exercise to the bottom of workout
+        }
     }
 
-    /**
-     *  Print Format Method - Palancapg
-     */
+    //Clears Workout and starts off with a fresh arrayList
+    public void restartWorkout(){
+        workoutList.clear();
+    }
+
+
+    //Printing the list out in a specific format
+    public void printWorkout(){
+        for(Exercise exercise:workoutList) {
+            System.out.println(exercise.name + "   " + String.valueOf(exercise.sets) + " x " + String.valueOf(exercise.reps));
+        }
+    }
+
+
+
+
 
 
 }
