@@ -1,30 +1,21 @@
 package com.example.cmsc355_project;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-/**
- * App's Main Welcome Screen
- * -------------------------
- * Use of Button to bring you to Main Workout Screen
- *
- * Possible Picture of Logo Implemented? - Palancapg
- *
- */
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-    private Button buttonNext; //variable for button
+public class MainActivity3 extends AppCompatActivity {
+    private Button buttonHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); //set current screen to layout of activity_main2.xml
+        setContentView(R.layout.activity_main3);
 
-        buttonNext = findViewById(R.id.buttonNext); //xml id for this button
-        buttonNext.setOnClickListener(new View.OnClickListener() {
+        buttonHome = findViewById(R.id.buttonHome); //xml id for this button
+        buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             //when button is clicked, opens activity 2 using openMainActivity2() method
             public void onClick(View view) {
@@ -38,4 +29,3 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent); //pass intent created in line above
     }
 }
-

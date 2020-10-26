@@ -7,12 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    //main welcome screen
-
-    //button to send user to the home screen
-
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textIntroTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#91F3DB"
@@ -42,15 +38,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    //fix constraints later
-
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:contentDescription="@string/imageHome_description"
+        app:layout_constraintBottom_toTopOf="@+id/textIntroTitle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/main_menu_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

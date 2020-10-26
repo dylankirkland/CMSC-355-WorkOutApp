@@ -6,7 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    //second activity page text box
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="77dp"
+        android:layout_height="84dp"
+        android:background="@drawable/homescreen"
+        android:text="@string/Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -42,19 +49,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_popup_reminder" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="106dp"
-        android:layout_height="57dp"
-        android:contentDescription="@string/home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/homescreen" />
-
-
-    //We should change this button to a regular button because it honestly doesn't show on my run of the app -Palancapg
     <Button
-        android:id="@+id/addWorkoutBttn"
+        android:id="@+id/buttonCreateWorkout"
         android:layout_width="77dp"
         android:layout_height="48dp"
         android:layout_marginStart="170dp"
@@ -73,7 +69,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/settingsBttn"
+        android:id="@+id/buttonSettings"
         android:layout_width="60dp"
         android:layout_height="56dp"
         android:layout_marginEnd="351dp"
