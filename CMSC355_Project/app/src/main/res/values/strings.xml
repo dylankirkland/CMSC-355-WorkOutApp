@@ -15,4 +15,12 @@
     <string name="Legs">Legs</string>
     <string name="Shoulders">Shoulders</string>
     <string name="Triceps">Triceps</string>
+    <string name="enter_number_of_sets">Enter number of sets</string>
+    <string name="create_new_workout">Create New Workout</string>
+    <string name="name_of_workout">Name of Workout:</string>
+    <string name="enter_name_of_workout">Enter name of workout</string>
+    <string name="enter_new_exercise">Add new exercise to your workout:</string>
+    <string name="enter_name_of_exercise">Enter name of exercise</string>
+    <string name="enter_number_of_reps">Enter number of reps</string>
+    <string name="submit">Submit</string>
 </resources>
