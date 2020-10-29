@@ -13,18 +13,26 @@ import java.util.ArrayList;
 
 public class Workout{
     ArrayList<Exercise> workoutList;
+    String name;
 
     //Default Constructor
     public Workout(){
+        this.workoutList = new ArrayList<Exercise>();
+        this.name = null;
     }
 
     //Parameterized Constructor
-    public Workout(ArrayList<Exercise> workoutList){
+    public Workout(ArrayList<Exercise> workoutList,String name){
        this.workoutList = workoutList;
+       this.name = name;
     }
 
     public void setWorkoutList(ArrayList<Exercise> workoutList) {
         this.workoutList = workoutList;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public ArrayList<Exercise> getWorkoutList() {
