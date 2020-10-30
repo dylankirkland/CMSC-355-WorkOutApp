@@ -3,6 +3,7 @@ package com.example.cmsc355_project;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,15 +16,28 @@ public class CreateWorkoutActivity extends AppCompatActivity {
         Toolbar toolbar;
         Button submitButton;
         Button submitButton2;
+        Button buttonHome;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_workout);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         submitButton = (Button) findViewById(R.id.submitExercise);
         submitButton2 = (Button) findViewById(R.id.submitExercise2);
 
+        buttonHome = findViewById(R.id.buttonHome);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            //when button is clicked, opens activity 2 using openMainActivity2() method
+            public void onClick(View view) {
+                openMainActivity2();
+            }
+        });
+
+        //causes runtime error, can't click create workout button or transition to create workout.xml
+        /*toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Create New Workout");
+         */
 
         final Workout workoutList = new Workout();
 
@@ -57,5 +71,11 @@ public class CreateWorkoutActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+    public void openMainActivity2() {
+        //intent object, parameters passed are context and class we want to open (context,class)
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent); //pass intent created in line above
     }
 }

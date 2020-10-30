@@ -7,6 +7,15 @@
     tools:context=".CreateWorkoutActivity">
 
 
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="77dp"
+        android:layout_height="84dp"
+        android:background="@drawable/homescreen"
+        android:text="@string/Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -68,7 +77,7 @@
         android:id="@+id/makeAnExercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="F6F6F6"
+
         android:fontFamily="@font/sirin_stencil"
         android:text="@string/enter_new_exercise"
         android:textColor="@android:color/widget_edittext_dark"

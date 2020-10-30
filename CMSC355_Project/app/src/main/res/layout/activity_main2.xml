@@ -32,15 +32,6 @@
         app:layout_constraintVertical_bias="0.002" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="65dp"
-        android:layout_height="60dp"
-        android:contentDescription="@string/settings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_preferences" />
-
-    <ImageView
         android:id="@+id/imageView6"
         android:layout_width="51dp"
         android:layout_height="56dp"
@@ -48,25 +39,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_popup_reminder" />
-
-    <Button
-        android:id="@+id/buttonCreateWorkout"
-        android:layout_width="77dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="672dp"
-        android:layout_marginEnd="164dp"
-        android:layout_marginRight="164dp"
-        android:layout_marginBottom="11dp"
-        android:background="@android:drawable/ic_input_add"
-        android:focusableInTouchMode="true"
-        android:fontFamily="@font/sirin_stencil"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonSettings"
@@ -78,5 +50,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCreateWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/add_workout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toEndOf="@+id/buttonHome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
