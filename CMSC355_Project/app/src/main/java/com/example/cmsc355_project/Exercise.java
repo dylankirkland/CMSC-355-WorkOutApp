@@ -29,7 +29,7 @@ public class Exercise{
      *
      *    running checks?? however each parameter should be going in correctly.
      */
-    public Exercise(String name,int reps,int sets){
+    public Exercise(String name,int sets,int reps){
         setName(name);
         setReps(reps);
         setSets(sets);
@@ -43,7 +43,7 @@ public class Exercise{
     }
 
     public void setReps(int reps) {
-        this.name= name;
+        this.reps = reps;
     }
 
     public void setSets(int sets) {
@@ -70,7 +70,7 @@ public class Exercise{
      */
 
     public String printFormat(){
-        return "The workout: " + getName() + " should be done for " + getSets() + " sets " + " and in each set should be "
+        return "The workout: " + getName() + " should be done for " + getSets() + " sets and in each set should be "
                 + getReps() + " reps.";
     }
 
