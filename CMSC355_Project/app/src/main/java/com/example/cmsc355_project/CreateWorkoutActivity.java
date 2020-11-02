@@ -6,23 +6,31 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.List;
 
 public class CreateWorkoutActivity extends AppCompatActivity {
+    Button submitButton;
+    Button submitButton2;
+    Button buttonHome;
+    ListView listView;
+    TextView workout_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Toolbar toolbar;
-        Button submitButton;
-        Button submitButton2;
-        Button buttonHome;
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_workout);
 
+        listView = (ListView) findViewById(R.id.workList);
         submitButton = (Button) findViewById(R.id.submitExercise);
         submitButton2 = (Button) findViewById(R.id.submitExercise2);
+        workout_name= (TextView) findViewById(R.id.workout_name);
 
         buttonHome = findViewById(R.id.buttonHome);
         buttonHome.setOnClickListener(new View.OnClickListener() {
@@ -32,12 +40,6 @@ public class CreateWorkoutActivity extends AppCompatActivity {
                 openMainActivity2();
             }
         });
-
-        //causes runtime error, can't click create workout button or transition to create workout.xml
-        /*toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle("Create New Workout");
-         */
 
         final Workout workoutList = new Workout();
 
@@ -51,8 +53,11 @@ public class CreateWorkoutActivity extends AppCompatActivity {
 
                 workoutList.setName(name);
 
+                workout_name.setText(name);
+
             }
         });
+
 
         //Takes a input from app and sets input to a new exercise. Then it adds it to a workout list
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -69,8 +74,29 @@ public class CreateWorkoutActivity extends AppCompatActivity {
                 Exercise newExercise = new Exercise(name,sets,reps);
                 workoutList.addExercise(newExercise);
 
+
+
+
+
             }
         });
+
+        /**** WORK IN PROGRESS
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, workoutList.getWorkoutList());
+        listView.setAdapter(arrayAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
+         ***///
+
+
+
+
+
 
     }
     public void openMainActivity2() {
