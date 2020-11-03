@@ -42,20 +42,21 @@
 
             <TextView
                 android:id="@+id/createNewWorkout"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_edges"
-                android:fontFamily="@font/sirin_stencil"
+                android:fontFamily="@font/share_tech_mono"
                 android:text="@string/create_new_workout"
-                android:textColor="@android:color/widget_edittext_dark"
+                android:textColor="@android:color/holo_blue_dark"
                 android:textSize="30sp" />
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
@@ -66,38 +67,44 @@
 
                 <LinearLayout
                     android:id="@+id/llCN2"
-                    android:layout_width="258dp"
+                    android:layout_width="match_parent"
                     android:layout_height="122dp"
-                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:orientation="vertical"
                     android:padding="6dp">
 
                     <TextView
                         android:id="@+id/enterWorkoutName"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="#F6F6F6"
-                        android:fontFamily="@font/sirin_stencil"
+                        android:fontFamily="@font/share_tech_mono"
                         android:text="@string/name_of_workout"
-                        android:textColor="@android:color/widget_edittext_dark"
+                        android:textColor="@android:color/holo_blue_dark"
                         android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/nameOfWorkout"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:gravity="center"
                         android:ems="10"
                         android:hint="@string/enter_name_of_workout"
                         android:inputType="textPersonName" />
 
                     <Button
                         android:id="@+id/submitExercise2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="@string/submit" />
+                        android:gravity="center"
+                        android:background="@drawable/rounded_edges"
+                        android:fontFamily="@font/share_tech_mono"
+                        android:text="@string/submit"
+                        android:textColor="@android:color/holo_blue_dark" />
 
                 </LinearLayout>
 
@@ -105,7 +112,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
@@ -118,52 +125,61 @@
                     android:id="@+id/llCN"
                     android:layout_width="match_parent"
                     android:layout_height="212dp"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="6dp">
 
                     <TextView
                         android:id="@+id/makeAnExercise"
-                        android:layout_width="wrap_content"
+                        android:layout_width="375dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/sirin_stencil"
+                        android:fontFamily="@font/share_tech_mono"
+                        android:gravity="center"
                         android:text="@string/enter_new_exercise"
-                        android:textColor="@android:color/widget_edittext_dark"
+                        android:textColor="@android:color/holo_blue_dark"
                         android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/nameOfExercise"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:ems="10"
+                        android:gravity="center"
                         android:hint="@string/enter_name_of_exercise"
                         android:inputType="textPersonName" />
 
                     <EditText
                         android:id="@+id/numberOfSets"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:gravity="center"
                         android:ems="10"
                         android:hint="@string/enter_number_of_sets"
                         android:inputType="numberSigned" />
 
                     <EditText
                         android:id="@+id/numberOfReps"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+
+                        android:gravity="center"
                         android:ems="10"
                         android:hint="@string/enter_number_of_reps"
                         android:inputType="number" />
 
                     <Button
                         android:id="@+id/submitExercise"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:background="@drawable/rounded_edges"
+                        android:fontFamily="@font/share_tech_mono"
+                        android:textColor="@android:color/holo_blue_dark"
                         android:text="@string/submit" />
 
                 </LinearLayout>
@@ -177,18 +193,17 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_edges"
-
-                android:textColor="@android:color/widget_edittext_dark"
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="@font/share_tech_mono"
                 android:textSize="20sp" />
 
             <ListView
                 android:id="@+id/workList"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="293dp"
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_edges"
                 android:nestedScrollingEnabled="true" />
-
 
         </LinearLayout>
 
