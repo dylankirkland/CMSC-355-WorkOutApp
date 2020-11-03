@@ -13,6 +13,8 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
+        Button settingsBtn =(Button) findViewById(R.id.submitBtn);
+
         Button buttonHome;
         buttonHome = findViewById(R.id.buttonHome); //xml id for this button
         buttonHome.setOnClickListener(new View.OnClickListener() {
@@ -22,10 +24,13 @@ public class Settings extends AppCompatActivity {
                 openMainActivity2();
             }
         });
+
+
     }
     public void openMainActivity2() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent); //pass intent created in line above
+
     }
 }
