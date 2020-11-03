@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -58,6 +59,8 @@ public class CreateWorkoutActivity extends AppCompatActivity {
             }
         });
 
+        final ArrayAdapter<Exercise> arrayAdapter = new ArrayAdapter<Exercise>(this, android.R.layout.simple_expandable_list_item_1, workoutList.getWorkoutList());
+        listView.setAdapter(arrayAdapter);
 
         //Takes a input from app and sets input to a new exercise. Then it adds it to a workout list
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -72,27 +75,19 @@ public class CreateWorkoutActivity extends AppCompatActivity {
                 int reps = Integer.parseInt(numberReps.getText().toString());
 
                 Exercise newExercise = new Exercise(name,sets,reps);
-                workoutList.addExercise(newExercise);
-
-
-
+                arrayAdapter.add(newExercise);
 
 
             }
         });
 
-        /**** WORK IN PROGRESS
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, workoutList.getWorkoutList());
-        listView.setAdapter(arrayAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                Toast.makeText(CreateWorkoutActivity.this, workoutList.getWorkoutList().get(i).printFormat(), Toast.LENGTH_SHORT).show();
             }
         });
-         ***///
-
 
 
 
