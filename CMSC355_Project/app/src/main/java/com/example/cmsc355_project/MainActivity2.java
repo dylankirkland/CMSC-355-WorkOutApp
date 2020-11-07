@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * App's Main Workout Layout Screen
@@ -26,6 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
     private Button buttonHome;
     private Button buttonCreateWorkout;
     private Button buttonSettings;
+    private ImageView simplyLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,9 @@ public class MainActivity2 extends AppCompatActivity {
             //when button is clicked, opens Settings using openSettings() method
             public void onClick(View view) { openSettings(); }
         });
+
+        simplyLogo = findViewById(R.id.simplyLogo);
+
     }
 
     public void openMainActivity2() {

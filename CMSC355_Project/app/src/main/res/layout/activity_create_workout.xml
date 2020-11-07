@@ -9,11 +9,12 @@
 
     <Button
         android:id="@+id/buttonHome"
-        android:layout_width="77dp"
-        android:layout_height="84dp"
-        android:background="@drawable/homescreen"
+        android:layout_width="390dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_edges"
         android:text="@string/Home"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
@@ -186,6 +187,14 @@
 
             </androidx.cardview.widget.CardView>
 
+            <ListView
+                android:id="@+id/workList"
+                android:layout_width="match_parent"
+                android:layout_height="141dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_edges"
+                android:nestedScrollingEnabled="true" />
+
             <TextView
                 android:id="@+id/workout_name"
                 android:layout_width="wrap_content"
@@ -196,14 +205,6 @@
                 android:textColor="@android:color/holo_blue_dark"
                 android:fontFamily="@font/share_tech_mono"
                 android:textSize="20sp" />
-
-            <ListView
-                android:id="@+id/workList"
-                android:layout_width="match_parent"
-                android:layout_height="293dp"
-                android:layout_gravity="center"
-                android:background="@drawable/rounded_edges"
-                android:nestedScrollingEnabled="true" />
 
         </LinearLayout>
 
