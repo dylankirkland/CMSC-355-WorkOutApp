@@ -1,8 +1,5 @@
 package com.example.cmsc355_project;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,24 +11,42 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CreateWorkoutActivity extends AppCompatActivity {
+
     Button submitButton;
     Button submitButton2;
     Button buttonHome;
     ListView listView;
-    TextView workout_name;
+    ArrayAdapter<Exercise> arrayAdapter;
+    Workout workoutList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_workout);
 
-        listView = (ListView) findViewById(R.id.workList);
-        submitButton = (Button) findViewById(R.id.submitExercise);
-        submitButton2 = (Button) findViewById(R.id.submitExercise2);
-        workout_name= (TextView) findViewById(R.id.workout_name);
+        workoutList = new Workout();
+
+        setListAdapter(workoutList);
+
+        submitButton2 = findViewById(R.id.submitExercise2);
+        submitButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setWorkoutName(workoutList);
+            }
+        });
+
+        //Takes a input from app and sets input to a new exercise. Then it adds it to a workout list
+        submitButton = findViewById(R.id.submitExercise);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createExercise();
+            }
+        });
 
         buttonHome = findViewById(R.id.buttonHome);
         buttonHome.setOnClickListener(new View.OnClickListener() {
@@ -42,56 +57,54 @@ public class CreateWorkoutActivity extends AppCompatActivity {
             }
         });
 
-        final Workout workoutList = new Workout();
-
-        //Takes a input from app and sets the name of workout list
-        submitButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                EditText workoutName = (EditText) findViewById(R.id.nameOfWorkout);
-
-                String name = workoutName.getText().toString();
-
-                workoutList.setName(name);
-
-                workout_name.setText(name);
-
-            }
-        });
-
-        final ArrayAdapter<Exercise> arrayAdapter = new ArrayAdapter<Exercise>(this, android.R.layout.simple_expandable_list_item_1, workoutList.getWorkoutList());
-        listView.setAdapter(arrayAdapter);
-
-        //Takes a input from app and sets input to a new exercise. Then it adds it to a workout list
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                EditText workName = (EditText) findViewById(R.id.nameOfExercise);
-                EditText numberSets = (EditText) findViewById(R.id.numberOfSets);
-                EditText numberReps = (EditText) findViewById(R.id.numberOfReps);
-
-                String name = workName.getText().toString();
-                int sets = Integer.parseInt(numberSets.getText().toString());
-                int reps = Integer.parseInt(numberReps.getText().toString());
-
-                Exercise newExercise = new Exercise(name,sets,reps);
-                arrayAdapter.add(newExercise);
-
-
-            }
-        });
-
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(CreateWorkoutActivity.this, workoutList.getWorkoutList().get(i).printFormat(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
 
+    /**
+     * The creates the list adapter for the workout list
+     * @param workoutList the workout the user is working on creating or editing
+     */
+    public void setListAdapter(Workout workoutList){
+        listView = findViewById(R.id.workList);
 
+        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, workoutList.getWorkoutList());
+        listView.setAdapter(arrayAdapter);
+    }
 
+    /**
+     * This sets the name of the workout
+     * @param workoutList the workout the user is working on creating or editing
+     */
+    public void setWorkoutName(Workout workoutList){
+        TextView workout_name = findViewById(R.id.workout_name);
+        EditText workoutName = findViewById(R.id.nameOfWorkout);
 
+        String name = workoutName.getText().toString();
+
+        workoutList.setName(name);
+
+        workout_name.setText(name);
+    }
+
+    /**
+     * Creates an Object to be added to the list adapter and to the workout list
+     */
+    public void createExercise(){
+        EditText workName = findViewById(R.id.nameOfExercise);
+        EditText numberSets = findViewById(R.id.numberOfSets);
+        EditText numberReps = findViewById(R.id.numberOfReps);
+
+        String name = workName.getText().toString();
+        int sets = Integer.parseInt(numberSets.getText().toString());
+        int reps = Integer.parseInt(numberReps.getText().toString());
+
+        Exercise newExercise =  new Exercise(name,sets,reps);
+        arrayAdapter.add(newExercise);
 
     }
     public void openMainActivity2() {
