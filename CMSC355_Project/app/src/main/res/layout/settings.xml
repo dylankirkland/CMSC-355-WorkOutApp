@@ -4,94 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateWorkoutActivity"
-    android:background="@drawable/gradient1">
+    tools:context=".CreateWorkoutActivity">
 
     <Button
         android:id="@+id/buttonHome"
-        android:layout_width="390dp"
-        android:layout_height="0dp"
-        android:background="@drawable/rounded_edges"
+        android:layout_width="77dp"
+        android:layout_height="84dp"
+        android:layout_weight="1"
+        android:background="@drawable/homescreen"
         android:text="@string/Home"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/llCN3"
-        android:layout_width="414dp"
-        android:layout_height="734dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:padding="10dp"
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="77dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginLeft="188dp"
+        android:layout_weight="1"
+        android:background="@drawable/homescreen"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/notificationsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginRight="260dp"
+        android:layout_marginBottom="574dp"
+        android:text="@string/notifications"
+        android:textOff="OFF"
+        android:textOn="ON"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/Preferences"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edges"
-            android:fontFamily="@font/share_tech_mono"
-            android:text="Preferences"
-            android:textColor="@android:color/holo_blue_dark" />
-        <Button
-            android:id="@+id/Profile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edges"
-            android:fontFamily="@font/share_tech_mono"
-            android:text="Profile"
-            android:textColor="@android:color/holo_blue_dark" />
-        <Button
-            android:id="@+id/Goals"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edges"
-            android:fontFamily="@font/share_tech_mono"
-            android:text="Goals"
-            android:textColor="@android:color/holo_blue_dark" />
-        <Button
-            android:id="@+id/Nutrition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edges"
-            android:fontFamily="@font/share_tech_mono"
-            android:text="Nutrition"
-            android:textColor="@android:color/holo_blue_dark" />
-        <Button
-            android:id="@+id/Agreement"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edges"
-            android:fontFamily="@font/share_tech_mono"
-            android:text="End User License Agreement"
-            android:textColor="@android:color/holo_blue_dark" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/Settings"
-        android:layout_width="367dp"
-        android:layout_height="36dp"
-        android:layout_gravity="center"
-        android:background="@drawable/rounded_edges"
-        android:fontFamily="@font/share_tech_mono"
-        android:gravity="center"
-        android:text="@string/Settings"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/llCN3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
