@@ -13,7 +13,7 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
-        Button settingsBtn =(Button) findViewById(R.id.submitBtn);
+        //Button settingsBtn =(Button) findViewById(R.id.submitBtn);
 
         Button buttonHome;
         buttonHome = findViewById(R.id.buttonHome); //xml id for this button
