@@ -24,8 +24,6 @@ public class Settings extends AppCompatActivity {
                 openMainActivity2();
             }
         });
-
-
     }
     public void openMainActivity2() {
         //intent object, parameters passed are context and class we want to open (context,class)
