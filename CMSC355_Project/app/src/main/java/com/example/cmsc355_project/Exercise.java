@@ -2,7 +2,7 @@ package com.example.cmsc355_project;
 
 /**
  *
- * The Exercise object represents a specific exervise it will contain the information of the exercise's name,
+ * The Exercise object represents a specific exercise it will contain the information of the exercise's name,
  * how many sets the user wants to do, and how many reps of the certain workout. It will also implement
  * methods to set these variables. -Palancapg
  *
@@ -14,15 +14,6 @@ public class Exercise{
     String name;
     int reps;
     int sets;
-
-    /**
-     *    Default Constructor -Palancapg
-     */
-    public Exercise(){
-        name = "N/A";
-        reps = 0;
-        sets = 0;
-    }
 
     /**
      *    Parametrized Constructor -Palancapg

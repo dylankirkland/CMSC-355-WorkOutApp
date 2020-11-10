@@ -16,25 +16,25 @@ import android.widget.Button;
  *
  */
 
-public class MainActivity extends AppCompatActivity {
-    private Button buttonNext; //variable for button
+public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); //set current screen to layout of activity_main2.xml
+        setContentView(R.layout.activity_welcome); //set current screen to layout of activity_home.xml
 
-        buttonNext = findViewById(R.id.buttonNext); //xml id for this button
+        //variable for button
+        Button buttonNext = findViewById(R.id.buttonNext); //xml id for this button
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             //when button is clicked, opens activity 2 using openMainActivity2() method
             public void onClick(View view) {
-                openMainActivity2();
+                openHomeActivity();
             }
         });
     }
-    public void openMainActivity2() {
+    public void openHomeActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent); //pass intent created in line above
     }
 }

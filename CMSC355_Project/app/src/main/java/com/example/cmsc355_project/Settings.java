@@ -21,13 +21,13 @@ public class Settings extends AppCompatActivity {
             @Override
             //when button is clicked, opens activity 2 using openMainActivity2() method
             public void onClick(View view) {
-                openMainActivity2();
+                openHomeActivity();
             }
         });
     }
-    public void openMainActivity2() {
+    public void openHomeActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent); //pass intent created in line above
 
     }
