@@ -31,7 +31,7 @@ public class CreateWorkoutActivity extends AppCompatActivity {
 
         setListAdapter(workoutList);
 
-        submitButton2 = findViewById(R.id.submitExercise2);
+        submitButton2 = findViewById(R.id.submitWorkoutName);
         submitButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
