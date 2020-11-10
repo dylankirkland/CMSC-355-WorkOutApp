@@ -87,7 +87,7 @@ public class Workout{
     //Printing the list out in a specific format
     public void printWorkout(){
         for(Exercise exercise:workoutList) {
-            System.out.println(exercise.name + "   " + String.valueOf(exercise.sets) + " x " + String.valueOf(exercise.reps));
+            System.out.println(exercise.name + "   " + exercise.sets + " x " + exercise.reps);
         }
     }
 

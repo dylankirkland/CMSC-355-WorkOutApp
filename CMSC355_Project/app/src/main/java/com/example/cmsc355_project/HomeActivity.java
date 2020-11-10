@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 /**
  * App's Main Workout Layout Screen
@@ -23,45 +22,39 @@ import android.widget.ImageView;
  *
  */
 
-public class MainActivity2 extends AppCompatActivity {
-    private Button buttonHome;
-    private Button buttonCreateWorkout;
-    private Button buttonSettings;
-    private ImageView simplyLogo;
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_home);
 
-        buttonHome = findViewById(R.id.buttonHome); //xml id for this button
+        Button buttonHome = findViewById(R.id.buttonHome); //xml id for this button
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             //when button is clicked, opens activity 2 using openMainActivity2() method
-            public void onClick(View view) { openMainActivity2(); }
+            public void onClick(View view) { openHomeActivity(); }
         });
 
-        buttonCreateWorkout = findViewById(R.id.buttonCreateWorkout);
+        Button buttonCreateWorkout = findViewById(R.id.buttonCreateWorkout);
         buttonCreateWorkout.setOnClickListener(new View.OnClickListener() {
             @Override
             //when button is clicked, opens Create Workout using openCreateWorkoutActivity() method
             public void onClick(View view) {openCreateWorkoutActivity(); }
         });
 
-        buttonSettings = findViewById(R.id.buttonSettings);
+        Button buttonSettings = findViewById(R.id.buttonSettings);
         buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             //when button is clicked, opens Settings using openSettings() method
             public void onClick(View view) { openSettings(); }
         });
 
-        simplyLogo = findViewById(R.id.simplyLogo);
-
     }
 
-    public void openMainActivity2() {
+    public void openHomeActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent); //pass intent created in line above
     }
     public void openCreateWorkoutActivity() {
