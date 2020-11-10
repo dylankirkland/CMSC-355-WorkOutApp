@@ -25,4 +25,9 @@
     <string name="enter_number_of_reps">Enter number of reps</string>
     <string name="submit">Submit</string>
     <string name="submit_changes">Submit Changes</string>
+    <string name="preferences">Preferences</string>
+    <string name="end_user_licence_agreement">End User Licence Agreement</string>
+    <string name="goals">Goals</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="profile">Profile</string>
 </resources>
