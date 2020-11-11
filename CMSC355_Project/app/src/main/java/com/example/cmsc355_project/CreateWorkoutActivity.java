@@ -116,6 +116,7 @@ public class CreateWorkoutActivity extends AppCompatActivity {
         int sets = Integer.parseInt(numberSets.getText().toString());
         int reps = Integer.parseInt(numberReps.getText().toString());
 
+        //creates new exercise
         Exercise newExercise =  new Exercise(name,sets,reps);
         arrayAdapter.add(newExercise);
 
