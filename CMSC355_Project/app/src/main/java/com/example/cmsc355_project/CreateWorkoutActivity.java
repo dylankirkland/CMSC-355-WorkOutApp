@@ -133,10 +133,16 @@ public class CreateWorkoutActivity extends AppCompatActivity {
         int sets = Integer.parseInt(numberSets.getText().toString());
         int reps = Integer.parseInt(numberReps.getText().toString());
 
-        Exercise newExercise = new Exercise(name, sets, reps);
+        //creates new exercise
+        Exercise newExercise =  new Exercise(name,sets,reps);
+      
         arrayAdapter.add(newExercise);
     }
-
+  
+   /**
+    * Saves the user created workout to the storage structure so that it can be accessed on home page
+    * @param name  takes in the name of the workout so it can set as key in storage map
+    */
     private void saveData(String name){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();
