@@ -57,10 +57,23 @@ public class CreateWorkoutActivity extends AppCompatActivity {
             }
         });
 
+       // listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+         //   @Override
+         //   public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l){
+           //     workoutList.removeExercise(workoutList.getWorkoutList().get(i), true);
+
+              //  return true;
+            //}
+
+        //});
+
+
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(CreateWorkoutActivity.this, workoutList.getWorkoutList().get(i).printFormat(), Toast.LENGTH_SHORT).show();
+
             }
         });
     }
