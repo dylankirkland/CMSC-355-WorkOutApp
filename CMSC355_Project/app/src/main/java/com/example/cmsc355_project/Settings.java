@@ -24,6 +24,14 @@ public class Settings extends AppCompatActivity {
                 openHomeActivity();
             }
         });
+        Button profile = findViewById(R.id.Profile);
+        Button goals = findViewById(R.id.Goals);
+        Button nutriention = findViewById(R.id.Nutrition);
+        Button preferences = findViewById(R.id.Preferences);
+        Button agreement = findViewById(R.id.Agreement);
+        Button submitBtn = findViewById(R.id.submitBtn);
+
+
     }
     public void openHomeActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
@@ -31,4 +39,6 @@ public class Settings extends AppCompatActivity {
         startActivity(intent); //pass intent created in line above
 
     }
+
+
 }
