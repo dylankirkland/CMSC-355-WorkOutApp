@@ -35,6 +35,10 @@ public class Workout{
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public ArrayList<Exercise> getWorkoutList() {
         return workoutList;
     }
@@ -82,7 +86,6 @@ public class Workout{
     public void restartWorkout(){
         workoutList.clear();
     }
-
 
     //Printing the list out in a specific format
     public void printWorkout(){

@@ -1,7 +1,9 @@
 package com.example.cmsc355_project;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,14 +15,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+
 public class CreateWorkoutActivity extends AppCompatActivity {
 
-    Button submitButton;
-    Button submitButton2;
-    Button buttonHome;
-    ListView listView;
-    ArrayAdapter<Exercise> arrayAdapter;
-    Workout workoutList;
+    private ListView listView;
+    private ArrayAdapter<Exercise> arrayAdapter;
+    private Workout workoutList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +36,17 @@ public class CreateWorkoutActivity extends AppCompatActivity {
 
         setListAdapter(workoutList);
 
-        submitButton2 = findViewById(R.id.submitWorkoutName);
-        submitButton2.setOnClickListener(new View.OnClickListener() {
+        Button saveBttn = findViewById(R.id.saveWorkoutButton);
+        saveBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveData(workoutList.getName());
+                Toast.makeText(CreateWorkoutActivity.this,workoutList.getName() + " has been saved! Load on Home Screen", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Button submitWorkoutNameBttn = findViewById(R.id.submitWorkoutName);
+        submitWorkoutNameBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setWorkoutName(workoutList);
@@ -40,15 +54,15 @@ public class CreateWorkoutActivity extends AppCompatActivity {
         });
 
         //Takes a input from app and sets input to a new exercise. Then it adds it to a workout list
-        submitButton = findViewById(R.id.submitExercise);
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        Button submitExerciseNameBttn = findViewById(R.id.submitExercise);
+        submitExerciseNameBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 createExercise();
             }
         });
 
-        buttonHome = findViewById(R.id.buttonHome);
+        Button buttonHome = findViewById(R.id.buttonHome);
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             //when button is clicked, opens activity 2 using openMainActivity2() method
@@ -56,6 +70,7 @@ public class CreateWorkoutActivity extends AppCompatActivity {
                 openHomeActivity();
             }
         });
+
 
        // listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
          //   @Override
@@ -89,11 +104,13 @@ public class CreateWorkoutActivity extends AppCompatActivity {
         listView.setAdapter(arrayAdapter);
     }
 
+
+
     /**
      * This sets the name of the workout
      * @param workoutList the workout the user is working on creating or editing
      */
-    public void setWorkoutName(Workout workoutList){
+    private void setWorkoutName(Workout workoutList){
         TextView workout_name = findViewById(R.id.workout_name);
         EditText workoutName = findViewById(R.id.nameOfWorkout);
 
@@ -107,7 +124,7 @@ public class CreateWorkoutActivity extends AppCompatActivity {
     /**
      * Creates an Object to be added to the list adapter and to the workout list
      */
-    public void createExercise(){
+    private void createExercise() {
         EditText workName = findViewById(R.id.nameOfExercise);
         EditText numberSets = findViewById(R.id.numberOfSets);
         EditText numberReps = findViewById(R.id.numberOfReps);
@@ -116,10 +133,20 @@ public class CreateWorkoutActivity extends AppCompatActivity {
         int sets = Integer.parseInt(numberSets.getText().toString());
         int reps = Integer.parseInt(numberReps.getText().toString());
 
-        Exercise newExercise =  new Exercise(name,sets,reps);
+        Exercise newExercise = new Exercise(name, sets, reps);
         arrayAdapter.add(newExercise);
+    }
+
+    private void saveData(String name){
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String workout = gson.toJson(workoutList);
+        editor.putString(name, workout);
+        editor.apply();
 
     }
+
     public void openHomeActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, HomeActivity.class);
