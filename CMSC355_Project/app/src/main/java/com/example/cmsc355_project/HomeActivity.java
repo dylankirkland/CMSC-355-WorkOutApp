@@ -52,10 +52,11 @@ public class HomeActivity extends AppCompatActivity {
         accessSharedPreferences(); //Accesses SharedPreferences and the keys to all the items in it
         setDropdownAdapter(workoutKeys); //Sets the spinner items to the keys in SharedPreferences
 
-        /*commented line below causes runtime error*/
-       // loadData(workouts_saved.getSelectedItem().toString()); //Loads a workout for selected workout to the List
-
-        setListAdapter(loadedWorkout); //Sets it as the list adapter
+        if(!workoutKeys.isEmpty()) {
+            loadData(workouts_saved.getSelectedItem().toString()); //Loads a workout for selected workout to the List
+            setListAdapter(loadedWorkout); //Sets it as the list adapter
+        }
+  
 
 
         Button buttonHome = findViewById(R.id.buttonHome); //xml id for this button
