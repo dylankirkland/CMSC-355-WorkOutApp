@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity3 extends AppCompatActivity {
+public class EditWorkoutActivity extends AppCompatActivity {
     private Button buttonHome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_edit_workout);
 
         buttonHome = findViewById(R.id.buttonHome); //xml id for this button
         buttonHome.setOnClickListener(new View.OnClickListener() {

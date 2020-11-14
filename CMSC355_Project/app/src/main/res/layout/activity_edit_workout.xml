@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateWorkoutActivity"
-    android:layout_gravity="center"
+    android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/gradient1"
-    android:orientation="vertical">
+    android:layout_gravity="center"
+    android:background="@drawable/gradient1">
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -16,24 +16,23 @@
         android:layout_gravity="center"
         android:layout_marginHorizontal="10dp"
         android:layout_marginVertical="10dp"
-        android:contentDescription="@string/create_new_workout"
-        app:srcCompat="@drawable/create_workout" />
+        app:srcCompat="@drawable/edit_workout" />
 
-    <TextView
-        android:id="@+id/workout_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Spinner
+        android:id="@+id/loadWorkoutDropdown"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/rounded_edges"
-        android:fontFamily="@font/share_tech_mono"
-        android:textSize="20sp" />
+        android:gravity="center"/>
 
     <ListView
         android:id="@+id/workList"
-        android:layout_width="wrap_content"
-        android:layout_height="158dp"
-        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
         android:layout_gravity="center"
+        android:layout_margin="5dp"
         android:layout_marginVertical="30dp"
         android:background="@drawable/rounded_edges" />
 
@@ -44,9 +43,7 @@
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:background="@drawable/rounded_edges"
-        app:cardCornerRadius="4dp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="189dp">
+        app:cardCornerRadius="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -101,9 +98,7 @@
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:background="@drawable/rounded_edges"
-        app:cardCornerRadius="4dp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="189dp">
+        app:cardCornerRadius="4dp">
 
         <LinearLayout
             android:id="@+id/llCN"
@@ -218,5 +213,7 @@
 
 
     </LinearLayout>
+
+
 
 </LinearLayout>

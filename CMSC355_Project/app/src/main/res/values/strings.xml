@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CMSC355_Project</string>
+    <string name="app_name">SimplyLift</string>
     <string name="imageHome_description">Content Description</string>
     <string name="next">next</string>
     <string name="welcome_to_n_SimplyLift">Welcome to \n SimplyLift</string>
@@ -31,4 +31,7 @@
     <string name="nutrition">Nutrition</string>
     <string name="profile">Profile</string>
     <string name="save">Save</string>
+    <string name="create_n_new_workout_t">Create\n New Workout\t</string>
+    <string name="edit_workout">Edit\n Workout\t</string>
+    <string name="delete_loaded_workout">Delete\n Loaded Workout\t</string>
 </resources>
