@@ -65,9 +65,9 @@ public class Exercise{
                 + getReps() + " reps.";
     }
 
-   // public String toString(){
-   //     return getName() + " " + getSets() + " x " + getReps();
-   // }
+   public String toString(){
+       return getName() + " " + getSets() + " x " + getReps();
+   }
 
 
 }
