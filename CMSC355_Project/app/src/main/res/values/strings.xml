@@ -2,7 +2,6 @@
     <string name="app_name">SimplyLift</string>
     <string name="imageHome_description">Content Description</string>
     <string name="next">next</string>
-    <string name="welcome_to_n_SimplyLift">Welcome to \n SimplyLift</string>
     <string name="SimplyLift">SimplyLift</string>
     <string name="second_activity_page">SimplyLift</string>
     <string name="add_workout">add workout</string>
@@ -10,12 +9,6 @@
     <string name="Home">Home</string>
     <string name="notifications">notifications</string>
     <string name="menu">menu</string>
-    <string name="Back">Back</string>
-    <string name="Biceps">Biceps</string>
-    <string name="Chest">Chest</string>
-    <string name="Legs">Legs</string>
-    <string name="Shoulders">Shoulders</string>
-    <string name="Triceps">Triceps</string>
     <string name="enter_number_of_sets">Enter number of sets</string>
     <string name="create_new_workout">Create New Workout</string>
     <string name="name_of_workout">Name of Workout:</string>
@@ -34,4 +27,5 @@
     <string name="create_n_new_workout_t">Create\n New Workout\t</string>
     <string name="edit_workout">Edit\n Workout\t</string>
     <string name="delete_loaded_workout">Delete\n Loaded Workout\t</string>
+    <string name="deletion_note">To delete an exercise push on the desired exercise on the list</string>
 </resources>
