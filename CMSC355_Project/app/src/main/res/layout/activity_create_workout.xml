@@ -15,7 +15,7 @@
         android:layout_height="41dp"
         android:layout_gravity="center"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="10dp"
+        android:layout_margin="5dp"
         android:contentDescription="@string/create_new_workout"
         app:srcCompat="@drawable/create_workout" />
 
@@ -26,7 +26,7 @@
         android:layout_gravity="center"
         android:background="@drawable/rounded_edges"
         android:fontFamily="@font/share_tech_mono"
-        android:textSize="20sp" />
+        android:textSize="14sp" />
 
     <ListView
         android:id="@+id/workList"
@@ -37,12 +37,21 @@
         android:layout_marginVertical="30dp"
         android:background="@drawable/rounded_edges" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/share_tech_mono"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="@string/deletion_note"
+        android:textSize="12sp" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
         android:background="@drawable/rounded_edges"
         app:cardCornerRadius="4dp"
         tools:layout_editor_absoluteX="95dp"
@@ -63,7 +72,7 @@
                 android:fontFamily="@font/share_tech_mono"
                 android:gravity="center"
                 android:text="@string/name_of_workout"
-
+                android:layout_marginTop="3dp"
                 android:textSize="18sp" />
 
             <EditText
@@ -122,7 +131,6 @@
                 android:fontFamily="@font/share_tech_mono"
                 android:gravity="center"
                 android:text="@string/enter_new_exercise"
-
                 android:textSize="18sp" />
 
             <EditText
@@ -197,7 +205,7 @@
         <Button
             android:id="@+id/buttonHome"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
@@ -209,7 +217,7 @@
         <Button
             android:id="@+id/saveWorkoutButton"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="20dp"
             android:layout_gravity="top"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
@@ -218,5 +226,7 @@
 
 
     </LinearLayout>
+
+
 
 </LinearLayout>

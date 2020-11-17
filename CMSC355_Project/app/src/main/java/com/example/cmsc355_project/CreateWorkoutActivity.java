@@ -1,5 +1,6 @@
 package com.example.cmsc355_project;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,19 +14,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 
 public class CreateWorkoutActivity extends AppCompatActivity {
 
     private ListView listView;
     private ArrayAdapter<Exercise> arrayAdapter;
     private Workout workoutList;
+    private  TextView workout_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +35,22 @@ public class CreateWorkoutActivity extends AppCompatActivity {
 
         setListAdapter(workoutList);
 
+        //When button it will save the user's created workout to the app's Shared Preference
         Button saveBttn = findViewById(R.id.saveWorkoutButton);
         saveBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveData(workoutList.getName());
-                Toast.makeText(CreateWorkoutActivity.this,workoutList.getName() + " has been saved! Load on Home Screen", Toast.LENGTH_SHORT).show();
+                if(workoutList.getName() == null && workout_name == null){ //The workout has to have a name to save properly this will check that
+                    Toast.makeText(CreateWorkoutActivity.this, "The workout trying to be saved is invalid! Please include a workout name.", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    saveData(workoutList.getName());
+                    Toast.makeText(CreateWorkoutActivity.this,workoutList.getName() + " has been saved! Load on Home Screen", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
+        //When button is pressed will set the Workout's name to whatever user inputs
         Button submitWorkoutNameBttn = findViewById(R.id.submitWorkoutName);
         submitWorkoutNameBttn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +68,26 @@ public class CreateWorkoutActivity extends AppCompatActivity {
             }
         });
 
+        //When ListView Element is "PUSHED" it will ask to delete the exercise
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l){
+                buildDeleteExercisePopup(i);
+                return true;
+            }
+        });
+
+        //When ListView Element is "PRESSED" it will give description of workout
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(CreateWorkoutActivity.this, workoutList.getWorkoutList().get(i).printFormat(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
         Button buttonHome = findViewById(R.id.buttonHome);
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,53 +98,32 @@ public class CreateWorkoutActivity extends AppCompatActivity {
         });
 
 
-       // listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-         //   @Override
-         //   public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l){
-           //     workoutList.removeExercise(workoutList.getWorkoutList().get(i), true);
-
-              //  return true;
-            //}
-
-        //});
-
-
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(CreateWorkoutActivity.this, workoutList.getWorkoutList().get(i).printFormat(), Toast.LENGTH_SHORT).show();
-
-            }
-        });
     }
 
     /**
      * The creates the list adapter for the workout list
      * @param workoutList the workout the user is working on creating or editing
      */
-    public void setListAdapter(Workout workoutList){
+    private void setListAdapter(Workout workoutList){
         listView = findViewById(R.id.workList);
 
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, workoutList.getWorkoutList());
-        listView.setAdapter(arrayAdapter);
+        listView.setAdapter(arrayAdapter); //Sets the workoutList as the adapter for the listView object
     }
-
-
 
     /**
      * This sets the name of the workout
      * @param workoutList the workout the user is working on creating or editing
      */
     private void setWorkoutName(Workout workoutList){
-        TextView workout_name = findViewById(R.id.workout_name);
+        workout_name = findViewById(R.id.workout_name);
         EditText workoutName = findViewById(R.id.nameOfWorkout);
 
-        String name = workoutName.getText().toString();
+        String name = workoutName.getText().toString(); //Grabs the user input and sets into a string variable
 
-        workoutList.setName(name);
+        workoutList.setName(name); //sets to the workList variable
 
-        workout_name.setText(name);
+        workout_name.setText(name); //sets to the textview element
     }
 
     /**
@@ -129,14 +134,16 @@ public class CreateWorkoutActivity extends AppCompatActivity {
         EditText numberSets = findViewById(R.id.numberOfSets);
         EditText numberReps = findViewById(R.id.numberOfReps);
 
+        //Grabs any input from the user and sets it so that it can create an exercise object
         String name = workName.getText().toString();
         int sets = Integer.parseInt(numberSets.getText().toString());
         int reps = Integer.parseInt(numberReps.getText().toString());
 
         //creates new exercise
         Exercise newExercise =  new Exercise(name,sets,reps);
-      
-        arrayAdapter.add(newExercise);
+
+        workoutList.addExercise(newExercise);
+        arrayAdapter.notifyDataSetChanged();
     }
   
    /**
@@ -153,6 +160,29 @@ public class CreateWorkoutActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This method will build a popup so that when a user presses an exercise it will give the user the option to delete it
+     * @param unwantedExercise this refers to the exercise the user would like to delete
+     */
+    private void buildDeleteExercisePopup(final int unwantedExercise){
+        //Creation of the alert dialog
+        new AlertDialog.Builder(CreateWorkoutActivity.this)
+                .setTitle("Are you sure?")
+                .setMessage("Please confirm for deletion of: " + workoutList.getWorkoutList().get(unwantedExercise).getName())
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        workoutList.removeExercise(workoutList.getWorkoutList().get(unwantedExercise)); //Removes workout from the workoutlist
+                        arrayAdapter.notifyDataSetChanged(); //updates the adapter
+                    }
+                })
+                .setNegativeButton("No",null)
+                .show();
+    }
+
+    /**
+     * Method that when used opens the HomeActivity()
+     */
     public void openHomeActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, HomeActivity.class);

@@ -53,6 +53,7 @@ public class HomeActivity extends AppCompatActivity {
 
         setDropdownAdapter(); //Sets the spinner items to the keys in SharedPreferences
 
+        //When element in spinner is click this will help pull up the needed information from that element
         workouts_saved.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -61,21 +62,25 @@ public class HomeActivity extends AppCompatActivity {
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                //Left Blank due to the fact that when noting is selected isn't truly needed
             }
         });
 
+
+        //when button is pressed it will delete the current loaded workout from the list adapter and shared preference
         Button buttonDeleteLoadedWorkout = findViewById(R.id.buttonDeleteWorkout);
         buttonDeleteLoadedWorkout.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 if(!workoutKeys.isEmpty()) {
-                    deleteLoadedWorkout(workouts_saved.getSelectedItem().toString());
+                    deleteLoadedWorkout(workouts_saved.getSelectedItem().toString()); //passes the selected item in the spinner object to the deleteLoadedWorkout method
                 }
             }
         });
 
 
+
+        //when button is pressed will open the createWorkoutActivity()
         Button buttonCreateWorkout = findViewById(R.id.buttonCreateWorkout);
         buttonCreateWorkout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +88,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {openCreateWorkoutActivity(); }
         });
 
+        //when button is pressed will open the settings
         Button buttonSettings = findViewById(R.id.buttonSettings);
         buttonSettings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +96,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) { openSettings(); }
         });
 
+        //when button is pressed will open the createEditWorkoutActivity()
         Button buttonEditWorkout = findViewById(R.id.buttonEditWorkout);
         buttonEditWorkout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,19 +110,19 @@ public class HomeActivity extends AppCompatActivity {
     /**
      * Sets the drop menu that will be used to load any saved workouts -Palancapg
      */
-    public void setDropdownAdapter(){
+    private void setDropdownAdapter(){
         workouts_saved = findViewById(R.id.loadWorkoutDropdown);
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         Map<String, ?> values = sharedPreferences.getAll();
 
-        if (!values.isEmpty()) {
+        if (!values.isEmpty()) { //checks to see if the value is not empty because if so it will skip this step
             for (Map.Entry<String, ?> entry : values.entrySet()) {
-                workoutKeys.add(entry.getKey());
+                workoutKeys.add(entry.getKey()); //adds all keys to an array list object
             }
 
             adapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, workoutKeys);
-            workouts_saved.setAdapter(adapter);
+            workouts_saved.setAdapter(adapter); //sets the spinner adapter with all the keys in saved on shared preferences
         }
     }
 
@@ -149,25 +156,36 @@ public class HomeActivity extends AppCompatActivity {
     private void deleteLoadedWorkout(String workout){
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove(workout);
+        editor.remove(workout); //removes the given workout name from preferences and later applies it
         editor.apply();
 
-        workoutList.setAdapter(null);
+        workoutList.setAdapter(null); //clears out the listview adapter to visual show usual its been deleted
 
-        adapter.remove(workouts_saved.getSelectedItem().toString());
+        adapter.remove(workouts_saved.getSelectedItem().toString()); //removes the workout name from the spinner object so that it is visually updated as well
         adapter.notifyDataSetChanged();
     }
 
+    /**
+     * Method that is called to open the createWorkoutActivity()
+     */
     public void openCreateWorkoutActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, CreateWorkoutActivity.class);
         startActivity(intent); //pass intent created in line above
     }
+
+    /**
+     * Method that is called to open settings activity
+     */
     public void openSettings() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent); //pass intent created in line above
     }
+
+    /**
+     * Method that is called to  open the EditWorkoutActivity()
+     */
     public void openEditWorkoutActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, EditWorkoutActivity.class);
