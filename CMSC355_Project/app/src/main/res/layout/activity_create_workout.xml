@@ -38,7 +38,7 @@
         android:background="@drawable/rounded_edges" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/deletionHint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/share_tech_mono"
@@ -48,7 +48,7 @@
         android:textSize="12sp" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view2"
+        android:id="@+id/workNameCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -104,7 +104,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view"
+        android:id="@+id/addExerciseCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -24,7 +24,7 @@ public class CreateWorkoutActivity extends AppCompatActivity {
     private ListView listView;
     private ArrayAdapter<Exercise> arrayAdapter;
     private Workout workoutList;
-    private  TextView workout_name;
+    private TextView workout_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

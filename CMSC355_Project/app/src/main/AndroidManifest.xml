@@ -12,9 +12,11 @@
         <activity
             android:name=".CreateWorkoutActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".Settings"></activity>
-        <activity android:name=".LicenseAgreement"></activity>
-        <activity android:name=".EditWorkoutActivity"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".LicenseAgreement" />
+        <activity
+            android:name=".EditWorkoutActivity"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".HomeActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>
