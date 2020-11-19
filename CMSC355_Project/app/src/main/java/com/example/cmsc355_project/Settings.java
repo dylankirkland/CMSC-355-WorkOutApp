@@ -26,16 +26,29 @@ public class Settings extends AppCompatActivity {
         });
         Button profile = findViewById(R.id.Profile);
         Button goals = findViewById(R.id.Goals);
-        Button nutriention = findViewById(R.id.Nutrition);
+        Button nutrition = findViewById(R.id.Nutrition);
         Button preferences = findViewById(R.id.Preferences);
-        Button agreement = findViewById(R.id.Agreement);
         Button submitBtn = findViewById(R.id.submitBtn);
 
+        Button eula = findViewById(R.id.eula);
+        eula.setOnClickListener(new View.OnClickListener() {
+            @Override
+            //when button is clicked, opens activity 2 using openMainActivity2() method
+            public void onClick(View view) {
+                openEula();
+            }
+        });
 
     }
     public void openHomeActivity() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent); //pass intent created in line above
+
+    }
+    public void openEula() {
+        //intent object, parameters passed are context and class we want to open (context,class)
+        Intent intent = new Intent(this, LicenseAgreement.class);
         startActivity(intent); //pass intent created in line above
 
     }

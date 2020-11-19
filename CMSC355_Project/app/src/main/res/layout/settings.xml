@@ -19,20 +19,20 @@
         android:gravity="center"
         android:text="@string/preferences"
         android:textColor="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toTopOf="@+id/Agreement"
+        app:layout_constraintBottom_toTopOf="@+id/eula"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/Agreement"
+        android:id="@+id/eula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/rounded_edges"
         android:fontFamily="@font/share_tech_mono"
         android:gravity="center"
-        android:text="@string/end_user_licence_agreement"
+        android:text="@string/eula"
         android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/submitBtn"
         app:layout_constraintEnd_toEndOf="parent"
