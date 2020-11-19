@@ -28,4 +28,6 @@
     <string name="edit_workout">Edit\n Workout\t</string>
     <string name="delete_loaded_workout">Delete\n Loaded Workout\t</string>
     <string name="deletion_note">To delete an exercise push on the desired exercise on the list</string>
+    <string name="Back">Back</string>
+    <string name="eula">End User License Agreement</string>
 </resources>
