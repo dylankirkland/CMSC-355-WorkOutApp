@@ -30,4 +30,6 @@
     <string name="deletion_note">To delete an exercise push on the desired exercise on the list</string>
     <string name="Back">Back</string>
     <string name="eula">End User License Agreement</string>
+    <string name="eulaParagraph">This End User License Agreement (EULA) is a legal agreement between you, the user, and us, the developers of this app as well as all affiliates.By using our app, SimplyLift, the user agrees to the following:
+We, the developers, which are the people who have worked on this app prior to public release, claim all legal and property rights to SimplyLift.We are not responsible for anything that happens to devices running the app. All uses of the app must be for legal purposes. Any intent to use this software for illegal and/or unethical purposes is restricted. Illegal usage will result in revocation of your license to use this app, and all services provided to you by this app will be terminated immediately.</string>
 </resources>

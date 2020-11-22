@@ -37,8 +37,7 @@
         android:layout_height="485dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/rounded_edges"
-        android:text="By using our app, SimplyLift, the user agrees to the following:
-We, the developers of SimplyLift, are not responsible for anything that happens to devices running the app.Restricting use.Property of developers.Disclaim warranties.Power to revoke someone's license, end service for any reason."
+        android:text="@string/eulaParagraph"
         app:layout_constraintBottom_toTopOf="@+id/buttonHome"
         app:layout_constraintEnd_toEndOf="parent"
 
