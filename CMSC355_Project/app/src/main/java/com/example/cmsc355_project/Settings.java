@@ -28,7 +28,7 @@ public class Settings extends AppCompatActivity {
         Button goals = findViewById(R.id.Goals);
         Button nutrition = findViewById(R.id.Nutrition);
         Button preferences = findViewById(R.id.Preferences);
-        Button submitBtn = findViewById(R.id.submitBtn);
+        //Button submitBtn = findViewById(R.id.submitBtn);
 
         Button eula = findViewById(R.id.eula);
         eula.setOnClickListener(new View.OnClickListener() {

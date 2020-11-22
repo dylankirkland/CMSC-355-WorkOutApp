@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -59,6 +60,15 @@ public class HomeActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 loadData(workouts_saved.getSelectedItem().toString()); //Loads a workout for selected workout to the List
                 setListAdapter(loadedWorkout); //Sets it as the list adapter
+
+                //When ListView Element is "PRESSED" it will give description of workout
+                workoutList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        Toast.makeText(HomeActivity.this, loadedWorkout.getWorkoutList().get(i).printFormat(), Toast.LENGTH_SHORT).show();
+
+                    }
+                });
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
