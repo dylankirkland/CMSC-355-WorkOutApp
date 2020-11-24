@@ -11,20 +11,20 @@ import java.util.ArrayList;
  *
  */
 
-public class Workout{
+public class Workout {
     ArrayList<Exercise> workoutList;
     String name;
 
     //Default Constructor
-    public Workout(){
+    public Workout() {
         this.workoutList = new ArrayList<Exercise>();
         this.name = null;
     }
 
     //Parameterized Constructor
-    public Workout(ArrayList<Exercise> workoutList,String name){
-       this.workoutList = workoutList;
-       this.name = name;
+    public Workout(ArrayList<Exercise> workoutList, String name) {
+        this.workoutList = workoutList;
+        this.name = name;
     }
 
     public void setWorkoutList(ArrayList<Exercise> workoutList) {
@@ -44,14 +44,32 @@ public class Workout{
     }
 
     //Method on Adding exercises to Workout and should update list and reprint the list
-    public void addExercise(Exercise newExercise){
+    public void addExercise(Exercise newExercise) {
         this.workoutList.add(newExercise);
+
+        //Reprint updated workout list
+        printWorkout();
     }
 
     //Method on Removing specific from list and should update list and reprint the list
-    public void removeExercise(Exercise unwantedExercise){
-        workoutList.remove(unwantedExercise);
+    public void removeExercise(Exercise unwantedExercise) {
+
+        if (workoutList.contains(unwantedExercise)) { //Checks to see if the exercise is in the workout and the user actually wants to remove it -Palancapg
+            this.workoutList.remove(unwantedExercise);
+        }
+        // else if(!workoutList.contains(unwantedExercise) ){
+        //  System.out.println("Exercise: " + unwantedExercise.name + " looking to be removed is not found");
+        // }
+        //else if(workoutList.contains(unwantedExercise) && !confirmation){
+        //System.out.println("Removal Process Halted");
+        // }
+        //else{
+        //  System.out.println("Exercise and Confirmation can not be found :(");
     }
+
+    //Reprint updated workout list
+  //  printWorkout();
+
 
     //Method will rearrange list if a user wants to
     public void rearrange(Exercise movingExercise, int index){
