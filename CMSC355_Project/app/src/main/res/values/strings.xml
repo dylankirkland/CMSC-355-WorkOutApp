@@ -27,7 +27,7 @@
     <string name="create_n_new_workout_t">Create\n New Workout\t</string>
     <string name="edit_workout">Edit\n Workout\t</string>
     <string name="delete_loaded_workout">Delete\n Loaded Workout\t</string>
-    <string name="deletion_note">To delete an exercise push on the desired exercise on the list</string>
+    <string name="deletion_note">To delete an exercise push and hold on the desired exercise on the list</string>
     <string name="Back">Back</string>
     <string name="eula">End User License Agreement</string>
     <string name="eulaParagraph">This End User License Agreement (EULA) is a legal agreement between you, the user, and us, the developers of this app as well as all affiliates.By using our app, SimplyLift, the user agrees to the following:
