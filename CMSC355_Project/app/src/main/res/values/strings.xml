@@ -14,8 +14,8 @@
     <string name="name_of_workout">Name of Workout:</string>
     <string name="enter_name_of_workout">Enter name of workout</string>
     <string name="enter_new_exercise">Add new exercise to your workout:</string>
-    <string name="enter_name_of_exercise">Enter name of exercise</string>
-    <string name="enter_number_of_reps">Enter number of reps</string>
+    <string name="enter_name_of_exercise">Enter the name of exercise</string>
+    <string name="enter_number_of_reps">Enter the number of reps</string>
     <string name="submit">Submit</string>
     <string name="submit_changes">Submit Changes</string>
     <string name="preferences">Preferences</string>
