@@ -14,8 +14,8 @@
     <string name="name_of_workout">Name of Workout:</string>
     <string name="enter_name_of_workout">Enter name of workout</string>
     <string name="enter_new_exercise">Add new exercise to your workout:</string>
-    <string name="enter_name_of_exercise">Enter name of exercise</string>
-    <string name="enter_number_of_reps">Enter number of reps</string>
+    <string name="enter_name_of_exercise">Enter the name of exercise</string>
+    <string name="enter_number_of_reps">Enter the number of reps</string>
     <string name="submit">Submit</string>
     <string name="submit_changes">Submit Changes</string>
     <string name="preferences">Preferences</string>
@@ -27,9 +27,13 @@
     <string name="create_n_new_workout_t">Create\n New Workout\t</string>
     <string name="edit_workout">Edit\n Workout\t</string>
     <string name="delete_loaded_workout">Delete\n Loaded Workout\t</string>
-    <string name="deletion_note">To delete an exercise push on the desired exercise on the list</string>
+    <string name="deletion_note">To delete an exercise push and hold on the desired exercise on the list</string>
     <string name="Back">Back</string>
     <string name="eula">End User License Agreement</string>
     <string name="eulaParagraph">This End User License Agreement (EULA) is a legal agreement between you, the user, and us, the developers of this app as well as all affiliates.By using our app, SimplyLift, the user agrees to the following:
 We, the developers, which are the people who have worked on this app prior to public release, claim all legal and property rights to SimplyLift.We are not responsible for anything that happens to devices running the app. All uses of the app must be for legal purposes. Any intent to use this software for illegal and/or unethical purposes is restricted. Illegal usage will result in revocation of your license to use this app, and all services provided to you by this app will be terminated immediately.</string>
+    <string name="confirm">confirm</string>
+    <string name="type_your_weight">Type your weight</string>
+    <string name="type_your_age">type your age</string>
+    <string name="simplylogo">TODO</string>
 </resources>

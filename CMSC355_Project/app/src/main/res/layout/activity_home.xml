@@ -32,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
             android:text="@string/edit_workout" />
@@ -42,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="15dp"
+            android:textColor="@android:color/holo_blue_dark"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
             android:text="@string/create_n_new_workout_t" />
@@ -51,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
             android:text="@string/delete_loaded_workout" />

@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.918" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/welcomeImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="25dp"
@@ -37,7 +37,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/welcome" />
+        app:srcCompat="@drawable/welcome"
+        android:contentDescription="@string/app_name"
+        android:layout_marginStart="25dp" />
 
     <ImageView
         android:id="@+id/simplyLogo"
@@ -45,12 +47,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeImage"
+        app:layout_constraintEnd_toStartOf="@+id/welcomeImage"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/simplylogo"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

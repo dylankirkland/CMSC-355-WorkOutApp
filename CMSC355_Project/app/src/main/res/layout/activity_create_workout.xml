@@ -210,9 +210,13 @@
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
             android:gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
             android:text="@string/Home"
             android:layout_marginRight="30dp"
-            android:layout_marginEnd="30dp"/>
+            android:layout_marginEnd="30dp"
+            style="?android:attr/buttonBarButtonStyle"
+            />
+
 
         <Button
             android:id="@+id/saveWorkoutButton"
@@ -221,8 +225,11 @@
             android:layout_gravity="top"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
+            android:textColor="@android:color/holo_blue_dark"
             android:gravity="center"
-            android:text="@string/save" />
+            android:text="@string/save"
+            style="?android:attr/buttonBarButtonStyle"
+            />
 
 
     </LinearLayout>
