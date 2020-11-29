@@ -35,6 +35,7 @@
             android:textColor="@android:color/holo_blue_dark"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
+            android:style="?android:attr/buttonBarButtonStyle
             android:text="@string/edit_workout" />
 
         <Button
@@ -46,6 +47,8 @@
             android:textColor="@android:color/holo_blue_dark"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
+            android:style="?android:attr/buttonBarButtonStyle
+
             android:text="@string/create_n_new_workout_t" />
 
         <Button
@@ -56,6 +59,8 @@
             android:textColor="@android:color/holo_blue_dark"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
+            android:style="?android:attr/buttonBarButtonStyle
+
             android:text="@string/delete_loaded_workout" />
     </LinearLayout>
 
