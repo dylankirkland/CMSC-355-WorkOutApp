@@ -46,7 +46,13 @@ public class Settings extends AppCompatActivity {
             }
         });
 
-
+        nutrition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            //when button is clicked, opens activity 2 using openMainActivity2() method
+            public void onClick(View view) {
+                openNutrition();
+            }
+        });
     }
 
     public void openHomeActivity() {
@@ -64,6 +70,11 @@ public class Settings extends AppCompatActivity {
     public void openProfile() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, Profile.class);
+        startActivity(intent); //pass intent created in line above
+    }
+    public void openNutrition() {
+        //intent object, parameters passed are context and class we want to open (context,class)
+        Intent intent = new Intent(this, Nutrition.class);
         startActivity(intent); //pass intent created in line above
     }
 
