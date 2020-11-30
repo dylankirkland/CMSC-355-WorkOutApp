@@ -77,6 +77,8 @@ public class Settings extends AppCompatActivity {
         Intent intent = new Intent(this, Nutrition.class);
         startActivity(intent); //pass intent created in line above
     }
+    
+    //Adding tips for beginners page
 
 
 }
