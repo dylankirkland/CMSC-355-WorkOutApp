@@ -67,6 +67,7 @@ public class Settings extends AppCompatActivity {
         startActivity(intent); //pass intent created in line above
 
     }
+
     public void openProfile() {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, Profile.class);

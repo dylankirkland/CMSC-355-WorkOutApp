@@ -1,0 +1,18 @@
+name: Push on commit
+
+push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send Push Notification
+      uses: techulus/push-github-action@1.0.0
+      env:
+        API_KEY: 42470718-febf-4ac6-b634-a86e4ca5267f
+        MESSAGE: "Hey Ausawin, there's a new build"

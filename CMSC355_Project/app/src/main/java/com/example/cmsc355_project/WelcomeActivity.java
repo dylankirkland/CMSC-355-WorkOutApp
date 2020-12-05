@@ -18,8 +18,8 @@ import android.widget.ImageView;
  */
 
 public class WelcomeActivity extends AppCompatActivity {
-    public ImageView simplyLogo = findViewById(R.id.simplyLogo);
-    public ImageView welcomeImage = findViewById(R.id.welcomeImage);
+    //ImageView simplyLogo = findViewById(R.id.simplyLogo);
+    //ImageView welcomeImage = findViewById(R.id.welcomeImage);
 
 
     @Override
