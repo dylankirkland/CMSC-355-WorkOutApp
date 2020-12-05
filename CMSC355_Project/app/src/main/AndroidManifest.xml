@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Nutrition"></activity>
-        <activity android:name=".Profile" />
         <activity
             android:name=".CreateWorkoutActivity"
             android:windowSoftInputMode="adjustPan" />
