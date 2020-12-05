@@ -134,7 +134,7 @@ public class HomeActivity extends AppCompatActivity {
             adapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1, workoutKeys);
             workouts_saved.setAdapter(adapter); //sets the spinner adapter with all the keys in saved on shared preferences
         }
-    }
+    }//guhjkl
 
     /**
      * Loads a workout list that is saved to shared preferences to the loadedWorkout variable for future use - Palanapg
