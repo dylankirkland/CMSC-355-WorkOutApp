@@ -41,4 +41,5 @@ We, the developers, which are the people who have worked on this app prior to pu
     <string name="start">start</string>
     <string name="reset">reset</string>
     <string name="editworkout">TODO</string>
+    <string name="timer">Timer</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.cmsc355_project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -22,6 +23,11 @@ class TimerActivity extends AppCompatActivity {
     private boolean mTimerRunning;
 
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
+
+    public void returnHome(View v) {
+        Intent i = new Intent(this, HomeActivity.class);
+        startActivity(i);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
