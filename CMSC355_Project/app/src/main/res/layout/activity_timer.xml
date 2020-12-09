@@ -41,6 +41,9 @@
         android:layout_marginEnd="161dp"
         android:layout_marginRight="161dp"
         android:layout_marginBottom="273dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
         android:text="@string/start" />
 
     <Button
@@ -60,6 +63,9 @@
         android:layout_marginEnd="51dp"
         android:layout_marginRight="51dp"
         android:layout_marginBottom="272dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
         android:text="@string/reset" />
 
 </RelativeLayout>
