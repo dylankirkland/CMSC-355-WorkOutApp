@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/buttonSettings"
+        android:layout_width="60dp"
+        android:layout_height="56dp"
+        android:layout_gravity="start"
+        android:background="@android:drawable/ic_menu_sort_by_size" />
+
+    <ImageView
+        android:id="@+id/simplyLogo"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/SimplyLift"
+        app:srcCompat="@drawable/name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonEditWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:background="@drawable/rounded_edges"
+            android:fontFamily="@font/share_tech_mono"
+            android:text="@string/edit_workout" />
+
+        <Button
+            android:id="@+id/buttonCreateWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:background="@drawable/rounded_edges"
+            android:fontFamily="@font/share_tech_mono"
+            android:text="@string/create_n_new_workout_t" />
+
+        <Button
+            android:id="@+id/buttonDeleteWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:background="@drawable/rounded_edges"
+            android:fontFamily="@font/share_tech_mono"
+            android:text="@string/delete_loaded_workout" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/loadWorkoutDropdown"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_edges"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/workList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/rounded_edges" />
+
+</LinearLayout>

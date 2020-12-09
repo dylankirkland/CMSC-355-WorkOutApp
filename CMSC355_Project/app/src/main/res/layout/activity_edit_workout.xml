@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/gradient1">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        app:srcCompat="@drawable/edit_workout"
+        android:contentDescription="@string/editworkout" />
+
+    <Spinner
+        android:id="@+id/loadWorkoutDropdown"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_edges"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/workList"
+        android:layout_width="wrap_content"
+        android:layout_height="158dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="30dp"
+        android:background="@drawable/rounded_edges" />
+
+    <TextView
+        android:id="@+id/deletionHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/share_tech_mono"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="@string/deletion_note"
+        android:textSize="12sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/edit_addExerciseCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edges"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <TextView
+                android:id="@+id/makeAnExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/share_tech_mono"
+                android:gravity="center"
+                android:text="@string/enter_new_exercise"
+
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/nameOfExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints=""
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/enter_name_of_exercise"
+                android:inputType="textPersonName"
+                android:textSize="12sp" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/numberOfSets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/enter_number_of_sets"
+                    android:inputType="number"
+                    android:textSize="12sp" />
+                <EditText
+                    android:id="@+id/numberOfReps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/enter_number_of_reps"
+                    android:inputType="number"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/submitExercise"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_edges"
+                android:fontFamily="@font/share_tech_mono"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonHome"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_edges"
+            android:fontFamily="@font/share_tech_mono"
+            android:gravity="center"
+            android:text="@string/Home"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"/>
+
+        <Button
+            android:id="@+id/saveWorkoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="top"
+            android:background="@drawable/rounded_edges"
+            android:fontFamily="@font/share_tech_mono"
+            android:gravity="center"
+            android:text="@string/save" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

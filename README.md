@@ -10,7 +10,11 @@ Ausawin Saehaan committing something
 
 Dylan Kirkland commit
 
-Victoria branch commit
+Victoria branch committing something
 
-Phillip branch commit
+Phillip Palanca branch commit
 
+
+Midterm 1 2 3
+
+push notif test1
