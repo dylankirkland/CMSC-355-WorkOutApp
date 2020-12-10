@@ -100,7 +100,7 @@ public class Stopwatch extends Activity {
         // Get the text view
         final TextView timeView
                 = (TextView)findViewById(
-                R.id.time_view);
+                R.id.InfoBox1);
 
         // Creates a new Handler
         final Handler handler
