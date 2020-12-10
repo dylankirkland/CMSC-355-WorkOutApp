@@ -6,12 +6,30 @@
     android:background="@drawable/gradient1"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/buttonSettings"
-        android:layout_width="60dp"
-        android:layout_height="56dp"
-        android:layout_gravity="start"
-        android:background="@android:drawable/ic_menu_sort_by_size" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_width="60dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start"
+            android:background="@android:drawable/ic_menu_sort_by_size" />
+
+        <ImageButton
+            android:id="@+id/goTimer"
+            android:layout_width="60dp"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_edges"
+            android:onClick="goTimer"
+            android:tint="@android:color/holo_blue_dark"
+            app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/simplyLogo"
@@ -32,10 +50,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="@android:color/holo_blue_dark"
             android:background="@drawable/rounded_edges"
             android:fontFamily="@font/share_tech_mono"
-            android:text="@string/edit_workout" />
+            android:text="@string/edit_workout"
+            android:textColor="@android:color/holo_blue_dark" />
 
         <Button
             android:id="@+id/buttonCreateWorkout"

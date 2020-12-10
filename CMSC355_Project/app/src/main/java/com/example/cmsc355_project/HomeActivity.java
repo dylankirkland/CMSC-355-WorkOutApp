@@ -44,6 +44,10 @@ public class HomeActivity extends AppCompatActivity {
     private ListView workoutList;
     private ArrayAdapter<String> adapter;
 
+    public void goTimer(View v) {
+        Intent i = new Intent(this, TimerActivity.class);
+        startActivity(i);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
