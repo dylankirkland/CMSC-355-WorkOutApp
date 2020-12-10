@@ -42,4 +42,9 @@ We, the developers, which are the people who have worked on this app prior to pu
     <string name="reset">reset</string>
     <string name="editworkout">TODO</string>
     <string name="timer">Timer</string>
+    <string name="app_name2">GFG|Stopwatch</string>
+    <string name="startS">Start</string>
+    <string name="stopS">Stop</string>
+    <string name="resetS">Reset</string>
+
 </resources>

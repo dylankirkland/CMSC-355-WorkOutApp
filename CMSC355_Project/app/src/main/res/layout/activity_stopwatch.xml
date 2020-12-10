@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Stopwatch">
+    android:orientation="vertical"
+    android:tint="@android:color/holo_blue_dark"
+    tools:context="com.example.cmsc355_project.Stopwatch"
+    android:background="@drawable/gradient1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<TextView
+
+    android:id="@+id/time_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/rounded_edges"
+    android:textAppearance="@android:style/TextAppearance.Large"
+    android:textSize="56sp" />
+
+<Button
+
+    android:onClick="onClickStart"
+    android:text="@string/startS"
+    android:fontFamily="@font/share_tech_mono"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="8dp"
+    android:textColor="@android:color/holo_blue_dark"
+    android:background="@drawable/rounded_edges"
+     />
+<Button
+
+    android:id="@+id/stop_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="8dp"
+    android:fontFamily="@font/share_tech_mono"
+    android:textColor="@android:color/holo_blue_dark"
+    android:onClick="onClickStop"
+    android:text="@string/stopS"
+    android:background="@drawable/rounded_edges"/>
+<Button
+
+    android:id="@+id/reset_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="8dp"
+    android:fontFamily="@font/share_tech_mono"
+    android:textColor="@android:color/holo_blue_dark"
+    android:onClick="onClickReset"
+    android:text="@string/resetS"
+    android:background="@drawable/rounded_edges"/>
+    </LinearLayout>
