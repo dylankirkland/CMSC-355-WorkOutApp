@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tint="@android:color/holo_blue_dark"
+    tools:context="com.example.cmsc355_project.Stopwatch"
+    android:background="@drawable/gradient1">
+
+    <!--title of this tool/screen-->
+    <TextView
+        android:id="@+id/InfoBox1"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edges"
+        android:text="@string/timeCalc1"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="45sp"
+        android:fontFamily="@font/share_tech_mono"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <!--description of this tool/screen-->
+    <TextView
+        android:id="@+id/InfoBox2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/timeCalc2"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="15sp" />
+
+    <!--hours input title-->
+    <TextView
+        android:id="@+id/InfoBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/timeCalc3"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="22sp" />
+
+    <!--input box for user to enter hours available-->
+    <EditText
+        android:id="@+id/inputHours"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"/>
+
+    <!--minutes input title-->
+    <TextView
+        android:id="@+id/InfoBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/timeCalc4"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="22sp" />
+
+    <!--input box for user to enter minutes available-->
+    <EditText
+        android:id="@+id/inputMinutes"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"/>
+
+    <!--Button for calculating the number of exercises a
+    user can complete given their inputted timeframe-->
+    <!--Error in onCalcTime button method in
+    TimeCalculator.java-->
+    <Button
+        android:id="@+id/calcTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/timeCalc6"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp" />
+    <!--android:onClick="onCalcTime"-->
+
+    <TextView
+        android:id="@+id/outputExercises"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="number"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"/>
+
+    <!--description of assumptions made in calculation-->
+    <TextView
+        android:id="@+id/InfoBox5"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/timeCalc5"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp" />
+
+    <!--return to home screen button-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:onClick="onClickHome"
+        android:text="@string/Home" />
+
+</LinearLayout>

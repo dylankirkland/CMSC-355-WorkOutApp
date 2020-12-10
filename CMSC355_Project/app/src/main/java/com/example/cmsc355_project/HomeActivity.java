@@ -201,28 +201,40 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EditWorkoutActivity.class);
         startActivity(intent); //pass intent created in line above
     }
+
+    /*button method that is called to access the timer*/
     public void goTimer(View v) {
         Intent i = new Intent(this, TimerActivity.class);
         startActivity(i);
     }
 
+    /*button method that is called to access the stopwatch*/
     public void goStopwatch(View v) {
         Intent i = new Intent(this, Stopwatch.class);
         startActivity(i);
     }
 
+    /*button method that is called to go to the information for beginners*/
     public void goInfoScreen(View v) {
         Intent i = new Intent(this, InfoScreen.class);
         startActivity(i);
     }
 
+    /*button method that is called to go to the bodyweight exercises*/
     public void goBodyweightScreen(View v) {
         Intent i = new Intent(this, BodyweightExercises.class);
         startActivity(i);
     }
 
+    /*button method that is called to go to the weighted exercises*/
     public void goWeightedScreen(View v) {
         Intent i = new Intent(this, WeightedExercises.class);
+        startActivity(i);
+    }
+
+    /*button method that is called to go to the time calcutor */
+    public void goTimeCalc(View v) {
+        Intent i = new Intent(this, TimeCalculator.class);
         startActivity(i);
     }
 }

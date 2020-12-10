@@ -29,13 +29,6 @@
     <string name="delete_loaded_workout">Delete\n Loaded Workout\t</string>
     <string name="deletion_note">To delete an exercise push and hold on the desired exercise on the list</string>
     <string name="Back">Back</string>
-    <string name="eula">End User License Agreement</string>
-    <string name="eulaParagraph">This End User License Agreement (EULA) is a legal agreement between you, the user, and us, the developers of this app as well as all affiliates.By using our app, SimplyLift, the user agrees to the following:
-We, the developers, which are the people who have worked on this app prior to public release, claim all legal and property rights to SimplyLift.We are not responsible for anything that happens to devices running the app. All uses of the app must be for legal purposes. Any intent to use this software for illegal and/or unethical purposes is restricted. Illegal usage will result in revocation of your license to use this app, and all services provided to you by this app will be terminated immediately.</string>
-    <string name="confirm">confirm</string>
-    <string name="type_your_weight">Type your weight</string>
-    <string name="type_your_age">type your age</string>
-    <string name="simplylogo">TODO</string>
     <string name="back">BACK</string>
     <string name="home">HOME</string>
     <string name="start">start</string>
@@ -43,7 +36,20 @@ We, the developers, which are the people who have worked on this app prior to pu
     <string name="editworkout">TODO</string>
     <string name="timer">Timer</string>
     <string name="app_name2">GFG|Stopwatch</string>
+
+    <!--end user license agreement strings-->
+    <string name="eula">End User License Agreement</string>
+    <string name="eulaParagraph">This End User License Agreement (EULA) is a legal agreement between you, the user, and us, the developers of this app as well as all affiliates.By using our app, SimplyLift, the user agrees to the following:
+We, the developers, which are the people who have worked on this app prior to public release, claim all legal and property rights to SimplyLift.We are not responsible for anything that happens to devices running the app. All uses of the app must be for legal purposes. Any intent to use this software for illegal and/or unethical purposes is restricted. Illegal usage will result in revocation of your license to use this app, and all services provided to you by this app will be terminated immediately.</string>
+
+    <!--user profile strings-->
     <string name="profile1">User Profile</string>
+    <string name="confirm">confirm</string>
+    <string name="type_your_weight">Type your weight</string>
+    <string name="type_your_age">type your age</string>
+    <string name="simplylogo">TODO</string>
+
+    <!--strings for bodyweight exercises-->
     <string name="basicBody1">Bodyweight exercises</string>
     <string name="basicBody2">Basic bodyweight exercises</string>
     <string name="basicBody3">Below are descriptions for common bodyweight exercises</string>
@@ -52,6 +58,7 @@ We, the developers, which are the people who have worked on this app prior to pu
     <string name="basicBody6">Squats: Stand tall with tight core, then squat down. Then push weight through heels to stand back upright. </string>
     <string name="basicBody7">Crunches: Lie on back with bent knees and feet hip width apart on floor. Contract abs and lift upper body, pause, and return down.  </string>
 
+    <!--strings for weighted exercises-->
     <string name="basicWeight1">Weighted exercises</string>
     <string name="basicWeight2">Basic weighted exercises</string>
     <string name="basicWeight3">Below are descriptions for common weighted exercises</string>
@@ -60,12 +67,25 @@ We, the developers, which are the people who have worked on this app prior to pu
     <string name="basicWeight6">Push press: Stand tall with a tight core and hold barbell across front of shoulders. Bend knees and then push through heels to stand upright while pushing barbell directly overhead. Slowly lower barbell back to shoulders. </string>
     <string name="basicWeight7">Lunges: Same as squat form, but stepping one leg back on the way down. </string>
 
+    <!--stopwatch strings-->
     <string name="startS">Start</string>
     <string name="stopS">Stop</string>
     <string name="resetS">Reset</string>
+
+    <!--beginner information screen strings-->
     <string name="Info1">Beginner Information</string>
     <string name="Info2">This app is best suited for intermediate to advanced level athletes. The following information is advice for beginners that are building a foundation. "</string>
     <string name="Info4">⦾ For building muscle mass, use higher weights and lower repetitions. For building leaner muscle and endurance, use higher weights and lower repetitions."</string>
     <string name="Info3">⦾ For each exercise, try to use a weight that you can repeat for 3 sets of 8-12 repetitions that challenges you."</string>
     <string name="Info5">⦾ Do not challenge yourself beyond reason: Always ensure that the weight you are using is within you capabilities or use an experienced spotter. "</string>
+
+    <!--time calculator strings-->
+    <string name="timeCalc1">Time calculator</string>
+    <string name="timeCalc2">Use this tool to calculate approximately how many exercises you can complete in the time you have to exercise. Enter the hours and minutes you have available in your schedule. </string>
+    <string name="timeCalc3">Hours: </string>
+    <string name="timeCalc4">Minutes: </string>
+    <string name="timeCalc5">The number of exercises you have time for today: </string>
+    <string name="timeCalc6">Calculate </string>
+    <string name="timeCalc7">This value is based on the assumptions of 3 sets of 10 repetitions of 4 seconds each, with a 90 second rest time between each set. </string>
+
 </resources>

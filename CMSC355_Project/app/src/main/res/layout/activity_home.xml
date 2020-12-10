@@ -21,7 +21,7 @@
 
         <ImageButton
             android:id="@+id/goTimer"
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="56dp"
             android:background="@drawable/rounded_edges"
             android:onClick="goTimer"
@@ -30,7 +30,7 @@
 
         <ImageButton
             android:id="@+id/stopwatchButton"
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="56dp"
             android:background="@drawable/rounded_edges"
             android:onClick="goStopwatch"
@@ -39,7 +39,7 @@
 
         <ImageButton
             android:id="@+id/infoButton"
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="56dp"
             android:background="@drawable/rounded_edges"
             android:onClick="goInfoScreen"
@@ -67,6 +67,19 @@
             android:fontFamily="@font/share_tech_mono"
             android:onClick="goWeightedScreen"
             android:text="@string/basicWeight1"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="12sp"
+            android:tint="@android:color/holo_blue_dark"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+        <Button
+            android:id="@+id/timeCalc"
+            android:layout_width="70dp"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_edges"
+            android:fontFamily="@font/share_tech_mono"
+            android:onClick="goTimeCalc"
+            android:text="@string/timeCalc1"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="12sp"
             android:tint="@android:color/holo_blue_dark"
