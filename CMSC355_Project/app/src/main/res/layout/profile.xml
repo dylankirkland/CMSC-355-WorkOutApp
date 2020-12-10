@@ -18,10 +18,12 @@ android:background="@drawable/gradient1">
     android:layout_marginRight="162dp"
     android:layout_marginBottom="292dp"
     android:text="@string/confirm"
+    android:textColor="@android:color/holo_blue_dark"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@drawable/rounded_edges"/>
 
 <EditText
     android:id="@+id/editTextWeight"
@@ -40,7 +42,8 @@ android:background="@drawable/gradient1">
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    android:autofillHints="" />
+    android:autofillHints=""
+    android:background="@drawable/rounded_edges"/>
 
 <EditText
     android:id="@+id/ageEditText"
@@ -59,7 +62,39 @@ android:background="@drawable/gradient1">
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    android:autofillHints="" />
+    android:autofillHints=""
+    android:background="@drawable/rounded_edges"
+    />
+
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/profile1"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="45sp"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="27dp"
+        tools:layout_marginTop="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/profileHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:onClick="onClickHome"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="@string/Home"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="477dp"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
