@@ -46,6 +46,32 @@
             android:tint="@android:color/holo_blue_dark"
             app:srcCompat="@android:drawable/ic_menu_info_details" />
 
+        <Button
+            android:id="@+id/bodyweightButton"
+            android:layout_width="70dp"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_edges"
+            android:fontFamily="@font/share_tech_mono"
+            android:onClick="goBodyweightScreen"
+            android:text="@string/basicBody1"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="12sp"
+            android:tint="@android:color/holo_blue_dark"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+        <Button
+            android:id="@+id/weightButton"
+            android:layout_width="70dp"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_edges"
+            android:fontFamily="@font/share_tech_mono"
+            android:onClick="goWeightedScreen"
+            android:text="@string/basicWeight1"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="12sp"
+            android:tint="@android:color/holo_blue_dark"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
 
     </LinearLayout>
 

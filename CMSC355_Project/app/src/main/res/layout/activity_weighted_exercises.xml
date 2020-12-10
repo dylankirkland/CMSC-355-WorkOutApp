@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tint="@android:color/holo_blue_dark"
+    tools:context="com.example.cmsc355_project.Stopwatch"
+    android:background="@drawable/gradient1">
+
+    <!--//title of body weight exercises screen-->
+    <TextView
+        android:id="@+id/InfoBox1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edges"
+        android:text="@string/basicWeight2"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="45sp"
+        android:fontFamily="@font/share_tech_mono"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <!--description of screen purpose
+    educates users on the 4 core body weight exercises-->
+    <TextView
+        android:id="@+id/InfoBox2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/basicWeight3"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="15sp" />
+
+    <!--naming and describing first basic exercise-->
+    <TextView
+        android:id="@+id/InfoBox3"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/basicWeight4"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp" />
+
+    <!--naming and describing second basic exercise-->
+    <TextView
+        android:id="@+id/InfoBox4"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/basicWeight5"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp" />
+
+    <!--naming and describing third basic exercise-->
+    <TextView
+        android:id="@+id/InfoBox5"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/basicWeight6"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp" />
+
+    <!--naming and describing fourth basic exercise-->
+    <TextView
+        android:id="@+id/infoBox6"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/basicWeight7"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"/>
+
+    <!--button to return user to home screen-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:onClick="onClickHome"
+        android:text="@string/Home"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp" />
+
+</LinearLayout>

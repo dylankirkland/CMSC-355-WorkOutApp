@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".InfoScreen"/>
+        <activity android:name=".WeightedExercises"></activity>
+        <activity android:name=".BodyweightExercises" />
+        <activity android:name=".InfoScreen" />
         <activity android:name=".Stopwatch" />
         <activity android:name=".TimerActivity" />
         <activity android:name=".Nutrition" />

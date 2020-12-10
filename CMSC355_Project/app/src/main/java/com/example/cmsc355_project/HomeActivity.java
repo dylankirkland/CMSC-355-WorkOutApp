@@ -215,4 +215,14 @@ public class HomeActivity extends AppCompatActivity {
         Intent i = new Intent(this, InfoScreen.class);
         startActivity(i);
     }
+
+    public void goBodyweightScreen(View v) {
+        Intent i = new Intent(this, BodyweightExercises.class);
+        startActivity(i);
+    }
+
+    public void goWeightedScreen(View v) {
+        Intent i = new Intent(this, WeightedExercises.class);
+        startActivity(i);
+    }
 }

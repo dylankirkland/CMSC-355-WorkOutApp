@@ -44,6 +44,22 @@ We, the developers, which are the people who have worked on this app prior to pu
     <string name="timer">Timer</string>
     <string name="app_name2">GFG|Stopwatch</string>
     <string name="profile1">User Profile</string>
+    <string name="basicBody1">Bodyweight exercises</string>
+    <string name="basicBody2">Basic bodyweight exercises</string>
+    <string name="basicBody3">Below are descriptions for common bodyweight exercises</string>
+    <string name="basicBody4">Pushups: Enter plank position on all fours and tighten core. Lower body until chest skims floor. Pause and push body back up. Focus on activating core and back muscles. </string>
+    <string name="basicBody5">Pullups: Grasp a pullup bar with overhand grip shoulder width apart. Pull body upwards while squeezing lats and core until chin is above the bar. Pause, then slowly lower back to starting position. </string>
+    <string name="basicBody6">Squats: Stand tall with tight core, then squat down. Then push weight through heels to stand back upright. </string>
+    <string name="basicBody7">Crunches: Lie on back with bent knees and feet hip width apart on floor. Contract abs and lift upper body, pause, and return down.  </string>
+
+    <string name="basicWeight1">Weighted exercises</string>
+    <string name="basicWeight2">Basic weighted exercises</string>
+    <string name="basicWeight3">Below are descriptions for common weighted exercises</string>
+    <string name="basicWeight4">Squats: Tighten core and stand tall with chest up. Hold barbell across back of your shoulders. Squat down as low as possible, then focus on pushing weight through heels to stand back upright. </string>
+    <string name="basicWeight5">Bench press: Lie flat on bench with barbell on chest, gripped at shoulder width. Push bar straight upwards, maintaining strong wrists. </string>
+    <string name="basicWeight6">Push press: Stand tall with a tight core and hold barbell across front of shoulders. Bend knees and then push through heels to stand upright while pushing barbell directly overhead. Slowly lower barbell back to shoulders. </string>
+    <string name="basicWeight7">Lunges: Same as squat form, but stepping one leg back on the way down. </string>
+
     <string name="startS">Start</string>
     <string name="stopS">Stop</string>
     <string name="resetS">Reset</string>
