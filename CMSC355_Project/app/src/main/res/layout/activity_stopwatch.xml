@@ -11,7 +11,7 @@
 
 <TextView
 
-    android:id="@+id/time_view"
+    android:id="@+id/InfoBox1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"

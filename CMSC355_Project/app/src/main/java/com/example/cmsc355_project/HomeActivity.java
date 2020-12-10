@@ -210,4 +210,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent i = new Intent(this, Stopwatch.class);
         startActivity(i);
     }
+
+    public void goInfoScreen(View v) {
+        Intent i = new Intent(this, InfoScreen.class);
+        startActivity(i);
+    }
 }

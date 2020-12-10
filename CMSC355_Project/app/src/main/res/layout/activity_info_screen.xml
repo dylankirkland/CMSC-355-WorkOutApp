@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tint="@android:color/holo_blue_dark"
+    tools:context="com.example.cmsc355_project.Stopwatch"
+    android:background="@drawable/gradient1">
+
+    <TextView
+        android:id="@+id/InfoBox1"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_edges"
+        android:text="@string/Info1"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="45sp"
+        android:fontFamily="@font/share_tech_mono"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <TextView
+        android:id="@+id/InfoBox2"
+        android:layout_width="350dp"
+        android:layout_height="77dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/Info2"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/InfoBox3"
+        android:layout_width="350dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/Info3"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/InfoBox4"
+        android:layout_width="350dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/Info4"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/InfoBox5"
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:text="@string/Info5"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="23sp" />
+
+</LinearLayout>

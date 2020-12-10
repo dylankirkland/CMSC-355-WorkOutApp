@@ -37,6 +37,15 @@
             android:tint="@android:color/holo_blue_dark"
             app:srcCompat="@android:drawable/ic_menu_recent_history" />
 
+        <ImageButton
+            android:id="@+id/infoButton"
+            android:layout_width="60dp"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_edges"
+            android:onClick="goInfoScreen"
+            android:tint="@android:color/holo_blue_dark"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
 
     </LinearLayout>
 

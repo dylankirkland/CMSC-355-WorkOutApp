@@ -46,5 +46,9 @@ We, the developers, which are the people who have worked on this app prior to pu
     <string name="startS">Start</string>
     <string name="stopS">Stop</string>
     <string name="resetS">Reset</string>
-
+    <string name="Info1">Beginner Information</string>
+    <string name="Info2">This app is best suited for intermediate to advanced level athletes. The following information is advice for beginners that are building a foundation. "</string>
+    <string name="Info4">⦾ For building muscle mass, use higher weights and lower repetitions. For building leaner muscle and endurance, use higher weights and lower repetitions."</string>
+    <string name="Info3">⦾ For each exercise, try to use a weight that you can repeat for 3 sets of 8-12 repetitions that challenges you."</string>
+    <string name="Info5">⦾ Do not challenge yourself beyond reason: Always ensure that the weight you are using is within you capabilities or use an experienced spotter. "</string>
 </resources>
