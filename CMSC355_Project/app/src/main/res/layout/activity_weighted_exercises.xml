@@ -19,7 +19,7 @@
         android:background="@drawable/rounded_edges"
         android:text="@string/basicWeight2"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:textSize="45sp"
+        android:textSize="30sp"
         android:fontFamily="@font/share_tech_mono"
         android:textColor="@android:color/holo_blue_dark"
         />
