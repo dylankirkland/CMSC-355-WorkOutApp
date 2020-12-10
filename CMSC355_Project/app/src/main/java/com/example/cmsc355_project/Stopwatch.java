@@ -2,6 +2,7 @@ package com.example.cmsc355_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
@@ -93,6 +94,14 @@ public class Stopwatch extends Activity {
         seconds = 0;
     }
 
+    //Return to home screen on button click
+    public void onClickHome(View view)
+    {
+        //intent object, parameters passed are context and class we want to open (context,class)
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent); //pass intent created in line above
+    }
+
     // Sets the time value on stopwatch
     private void runTimer()
     {
@@ -136,4 +145,5 @@ public class Stopwatch extends Activity {
             }
         });
     }
+
 }

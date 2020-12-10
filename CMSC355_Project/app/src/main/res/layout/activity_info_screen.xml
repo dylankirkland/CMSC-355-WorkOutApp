@@ -26,7 +26,7 @@
     <TextView
         android:id="@+id/InfoBox2"
         android:layout_width="350dp"
-        android:layout_height="77dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:background="@drawable/rounded_edges"
@@ -39,20 +39,20 @@
     <TextView
         android:id="@+id/InfoBox3"
         android:layout_width="350dp"
-        android:layout_height="135dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/rounded_edges"
         android:fontFamily="@font/share_tech_mono"
         android:text="@string/Info3"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="23sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/InfoBox4"
         android:layout_width="350dp"
-        android:layout_height="165dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:background="@drawable/rounded_edges"
@@ -60,12 +60,12 @@
         android:text="@string/Info4"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="23sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/InfoBox5"
         android:layout_width="350dp"
-        android:layout_height="160dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:background="@drawable/rounded_edges"
@@ -73,6 +73,20 @@
         android:text="@string/Info5"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="23sp" />
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edges"
+        android:fontFamily="@font/share_tech_mono"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:onClick="onClickHome"
+        android:text="@string/Home" />
 
 </LinearLayout>

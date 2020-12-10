@@ -55,4 +55,18 @@
     android:onClick="onClickReset"
     android:text="@string/resetS"
     android:background="@drawable/rounded_edges"/>
-    </LinearLayout>
+
+    <Button
+        android:id="@+id/stopwatchHomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickHome"
+        android:text="@string/Home"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/share_tech_mono"
+        android:textColor="@android:color/holo_blue_dark"
+        android:background="@drawable/rounded_edges"/>
+
+</LinearLayout>
+
