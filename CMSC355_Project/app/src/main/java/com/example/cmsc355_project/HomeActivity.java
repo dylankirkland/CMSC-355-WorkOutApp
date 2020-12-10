@@ -44,16 +44,6 @@ public class HomeActivity extends AppCompatActivity {
     private ListView workoutList;
     private ArrayAdapter<String> adapter;
 
-    public void goTimer(View v) {
-        Intent i = new Intent(this, TimerActivity.class);
-        startActivity(i);
-    }
-
-    public void goStopwatch(View v) {
-        Intent i = new Intent(this, Stopwatch.class);
-        startActivity(i);
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -210,5 +200,14 @@ public class HomeActivity extends AppCompatActivity {
         //intent object, parameters passed are context and class we want to open (context,class)
         Intent intent = new Intent(this, EditWorkoutActivity.class);
         startActivity(intent); //pass intent created in line above
+    }
+    public void goTimer(View v) {
+        Intent i = new Intent(this, TimerActivity.class);
+        startActivity(i);
+    }
+
+    public void goStopwatch(View v) {
+        Intent i = new Intent(this, Stopwatch.class);
+        startActivity(i);
     }
 }

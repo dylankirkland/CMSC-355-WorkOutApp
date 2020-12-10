@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Stopwatch"></activity>
+        <activity android:name=".TimerActivity"/>
         <activity android:name=".Nutrition" />
         <activity
             android:name=".CreateWorkoutActivity"

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
-class TimerActivity extends AppCompatActivity {
+public class TimerActivity extends AppCompatActivity {
     private static final long START_TIME_IN_MILLIS = 180000;
 
     private TextView mTextViewCountdown;
