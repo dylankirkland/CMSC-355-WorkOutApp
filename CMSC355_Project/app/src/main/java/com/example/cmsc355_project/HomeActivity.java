@@ -48,6 +48,12 @@ public class HomeActivity extends AppCompatActivity {
         Intent i = new Intent(this, TimerActivity.class);
         startActivity(i);
     }
+
+    public void goStopwatch(View v) {
+        Intent i = new Intent(this, Stopwatch.class);
+        startActivity(i);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
